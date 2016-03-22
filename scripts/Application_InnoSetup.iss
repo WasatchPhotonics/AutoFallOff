@@ -2,9 +2,9 @@
 ; windows installer
 ;
 ; Redefine these for the application to be built
-#define MyAppName "PySideApp"
-#define module_name "pysideapp"
-#define MyAppExeName "PySideApp.exe"
+#define MyAppName "AutoFallOff"
+#define module_name "autofalloff"
+#define MyAppExeName "AutoFallOff.exe"
 ;
 ;
 ; Built for InnoSetup version 5.5.6 on Windows 7 x64
@@ -31,7 +31,7 @@
 ; NOTE: The value of AppId uniquely identifies this application.
 ; Do not use the same AppId value in installers for other applications.
 ; (To generate a new GUID, click Tools | Generate GUID inside the IDE.)
-AppId={{B9977C21-3BA0-4CCB-8398-0B78F34DC849}
+AppId={{B9977C21-3BA0-4CCB-8398-0A87B23BB849}
 
 ; See auto versioning section above
 ; Make the major version bumps manual here and have the command line
