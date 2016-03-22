@@ -1,0 +1,1313 @@
+1,-1873,66,50,Left Click Release
+2,1320,882,50,Left Click Down
+3,1320,882,50,Left Click Release
+4,1320,882,50,Keypress m
+5,1320,882,50,Keypress g
+6,1320,882,50,Keypress h
+7,1320,882,50,Keypress space
+8,1320,882,50,Keypress h
+9,1320,882,50,Keypress enter
+10,1320,882,50,Keypress m
+11,1320,882,50,Keypress g
+12,1320,882,50,Keypress h
+13,1320,882,50,Keypress space
+14,1320,882,50,Keypress q
+15,1320,882,50,Keypress enter
+16,1320,882,50,Keypress m
+17,1320,882,50,Keypress g
+18,1320,882,50,Keypress r
+19,1320,882,50,Keypress space
+20,1320,882,50,Keypress q
+21,1320,882,50,Keypress space
+22,1320,882,50,Keypress 9
+23,1320,882,50,Keypress 0
+24,1320,882,50,Keypress enter
+25,359,457,50,Left Click Down
+26,359,458,50,Mouse Movement
+27,359,458,50,Left Click Release
+28,322,476,50,Left Click Down
+29,322,476,50,Left Click Release
+30,322,476,50,Keypress 0
+31,322,476,50,Keypress .
+32,322,476,50,Keypress 1
+33,322,476,50,Keypress enter
+34,-254,408,50,Right Click Down
+35,-254,408,50,Right Click Release
+36,-222,447,50,Left Click Down
+37,-222,447,50,Left Click Release
+38,-222,447,50,Keypress 0
+39,-222,447,50,Keypress .
+40,-222,447,50,Keypress 1
+41,-222,447,50,Keypress r
+42,-222,447,500,Keypress enter
+43,-222,447,500,Keypress enter
+44,1182,902,50,Left Click Down
+45,1182,902,50,Left Click Release
+46,1182,903,50,Keypress m
+47,1182,903,50,Keypress g
+48,1182,903,50,Keypress h
+49,1182,903,50,Keypress space
+50,1182,903,50,Keypress q
+51,1182,903,50,Keypress enter
+52,1182,903,50,Keypress m
+53,1182,903,50,Keypress g
+54,1182,903,50,Keypress r
+55,1182,903,50,Keypress space
+56,1182,903,50,Keypress h
+57,1182,903,50,Keypress space
+58,1182,903,50,Keypress 9
+59,1182,903,50,Keypress 0
+60,1182,903,50,Keypress enter
+61,-174,543,50,Right Click Down
+62,-174,543,50,Right Click Release
+63,-174,578,50,Left Click Down
+64,-174,578,50,Left Click Release
+65,-174,578,50,Keypress 0
+66,-174,578,50,Keypress .
+67,-174,578,50,Keypress 1
+68,-174,578,50,Keypress s
+69,-174,578,500,Keypress enter
+70,-174,578,500,Keypress enter
+71,1241,959,50,Left Click Down
+72,1241,959,50,Left Click Release
+73,1241,959,50,Keypress m
+74,1241,959,50,Keypress g
+75,1241,959,50,Keypress r
+76,1241,959,50,Keypress space
+77,1241,959,50,Keypress q
+78,1241,959,50,Keypress space
+79,1241,959,50,Keypress 9
+80,1241,959,50,Keypress 0
+81,1241,959,50,Keypress enter
+82,-389,511,50,Right Click Down
+83,-389,511,50,Right Click Release
+84,-370,544,50,Left Click Down
+85,-370,544,50,Left Click Release
+86,-370,544,50,Keypress 0
+87,-370,544,50,Keypress .
+88,-370,544,50,Keypress 1
+89,-370,544,500,Keypress enter
+90,-370,544,500,Keypress enter
+91,-1869,57,50,Left Click Down
+92,-1873,66,50,Left Click Release
+93,1320,882,50,Left Click Down
+94,1320,882,50,Left Click Release
+95,1320,882,50,Keypress m
+96,1320,882,50,Keypress g
+97,1320,882,50,Keypress h
+98,1320,882,50,Keypress space
+99,1320,882,50,Keypress h
+100,1320,882,50,Keypress enter
+101,1320,882,50,Keypress m
+102,1320,882,50,Keypress g
+103,1320,882,50,Keypress h
+104,1320,882,50,Keypress space
+105,1320,882,50,Keypress q
+106,1320,882,50,Keypress enter
+107,1320,882,50,Keypress m
+108,1320,882,50,Keypress g
+109,1320,882,50,Keypress r
+110,1320,882,50,Keypress space
+111,1320,882,50,Keypress q
+112,1320,882,50,Keypress space
+113,1320,882,50,Keypress 9
+114,1320,882,50,Keypress 0
+115,1320,882,50,Keypress enter
+116,322,476,50,Left Click Down
+117,322,476,50,Left Click Release
+118,322,476,50,Left Click Down
+119,322,476,50,Left Click Release
+120,322,476,50,Keypress 0
+121,322,476,50,Keypress .
+122,322,476,50,Keypress 5
+123,322,476,50,Keypress enter
+124,-254,408,50,Right Click Down
+125,-254,408,50,Right Click Release
+126,-222,447,50,Left Click Down
+127,-222,447,50,Left Click Release
+128,-222,447,50,Keypress 0
+129,-222,447,50,Keypress .
+130,-222,447,50,Keypress 5
+131,-222,447,50,Keypress r
+132,-222,447,500,Keypress enter
+133,-222,447,500,Keypress enter
+134,1182,902,50,Left Click Down
+135,1182,902,50,Left Click Release
+136,1182,903,50,Keypress m
+137,1182,903,50,Keypress g
+138,1182,903,50,Keypress h
+139,1182,903,50,Keypress space
+140,1182,903,50,Keypress q
+141,1182,903,50,Keypress enter
+142,1182,903,50,Keypress m
+143,1182,903,50,Keypress g
+144,1182,903,50,Keypress r
+145,1182,903,50,Keypress space
+146,1182,903,50,Keypress h
+147,1182,903,50,Keypress space
+148,1182,903,50,Keypress 9
+149,1182,903,50,Keypress 0
+150,1182,903,50,Keypress enter
+151,-174,543,50,Right Click Down
+152,-174,543,50,Right Click Release
+153,-174,578,50,Left Click Down
+154,-174,578,50,Left Click Release
+155,-174,578,50,Keypress 0
+156,-174,578,50,Keypress .
+157,-174,578,50,Keypress 5
+158,-174,578,50,Keypress s
+159,-174,578,500,Keypress enter
+160,-174,578,500,Keypress enter
+161,1241,959,50,Left Click Down
+162,1241,959,50,Left Click Release
+163,1241,959,50,Keypress m
+164,1241,959,50,Keypress g
+165,1241,959,50,Keypress r
+166,1241,959,50,Keypress space
+167,1241,959,50,Keypress q
+168,1241,959,50,Keypress space
+169,1241,959,50,Keypress 9
+170,1241,959,50,Keypress 0
+171,1241,959,50,Keypress enter
+172,-389,511,50,Right Click Down
+173,-389,511,50,Right Click Release
+174,-370,544,50,Left Click Down
+175,-370,544,50,Left Click Release
+176,-370,544,50,Keypress 0
+177,-370,544,50,Keypress .
+178,-370,544,50,Keypress 5
+179,-370,544,500,Keypress enter
+180,-370,544,500,Keypress enter
+181,-1869,57,50,Left Click Down
+182,-1873,66,50,Left Click Release
+183,1320,882,50,Left Click Down
+184,1320,882,50,Left Click Release
+185,1320,882,50,Keypress m
+186,1320,882,50,Keypress g
+187,1320,882,50,Keypress h
+188,1320,882,50,Keypress space
+189,1320,882,50,Keypress h
+190,1320,882,50,Keypress enter
+191,1320,882,50,Keypress m
+192,1320,882,50,Keypress g
+193,1320,882,50,Keypress h
+194,1320,882,50,Keypress space
+195,1320,882,50,Keypress q
+196,1320,882,50,Keypress enter
+197,1320,882,50,Keypress m
+198,1320,882,50,Keypress g
+199,1320,882,50,Keypress r
+200,1320,882,50,Keypress space
+201,1320,882,50,Keypress q
+202,1320,882,50,Keypress space
+203,1320,882,50,Keypress 9
+204,1320,882,50,Keypress 0
+205,1320,882,50,Keypress enter
+206,322,476,50,Left Click Down
+207,322,476,50,Left Click Release
+208,322,476,50,Left Click Down
+209,322,476,50,Left Click Release
+210,322,476,200,Keypress 1
+211,322,476,50,Keypress enter
+212,-254,408,50,Right Click Down
+213,-254,408,50,Right Click Release
+214,-222,447,50,Left Click Down
+215,-222,447,50,Left Click Release
+216,-222,447,50,Keypress 1
+217,-222,447,50,Keypress r
+218,-222,447,500,Keypress enter
+219,-222,447,500,Keypress enter
+220,1182,902,50,Left Click Down
+221,1182,902,50,Left Click Release
+222,1182,903,50,Keypress m
+223,1182,903,50,Keypress g
+224,1182,903,50,Keypress h
+225,1182,903,50,Keypress space
+226,1182,903,50,Keypress q
+227,1182,903,50,Keypress enter
+228,1182,903,50,Keypress m
+229,1182,903,50,Keypress g
+230,1182,903,50,Keypress r
+231,1182,903,50,Keypress space
+232,1182,903,50,Keypress h
+233,1182,903,50,Keypress space
+234,1182,903,50,Keypress 9
+235,1182,903,50,Keypress 0
+236,1182,903,50,Keypress enter
+237,-174,543,50,Right Click Down
+238,-174,543,50,Right Click Release
+239,-174,578,50,Left Click Down
+240,-174,578,50,Left Click Release
+241,-174,578,50,Keypress 1
+242,-174,578,50,Keypress s
+243,-174,578,500,Keypress enter
+244,-174,578,500,Keypress enter
+245,1241,959,50,Left Click Down
+246,1241,959,50,Left Click Release
+247,1241,959,50,Keypress m
+248,1241,959,50,Keypress g
+249,1241,959,50,Keypress r
+250,1241,959,50,Keypress space
+251,1241,959,50,Keypress q
+252,1241,959,50,Keypress space
+253,1241,959,50,Keypress 9
+254,1241,959,50,Keypress 0
+255,1241,959,50,Keypress enter
+256,-389,511,50,Right Click Down
+257,-389,511,50,Right Click Release
+258,-370,544,50,Left Click Down
+259,-370,544,50,Left Click Release
+260,-370,544,50,Keypress 1
+261,-370,544,500,Keypress enter
+262,-370,544,500,Keypress enter
+263,-1869,57,50,Left Click Down
+264,-1873,66,50,Left Click Release
+265,1320,882,50,Left Click Down
+266,1320,882,50,Left Click Release
+267,1320,882,50,Keypress m
+268,1320,882,50,Keypress g
+269,1320,882,50,Keypress h
+270,1320,882,50,Keypress space
+271,1320,882,50,Keypress h
+272,1320,882,50,Keypress enter
+273,1320,882,50,Keypress m
+274,1320,882,50,Keypress g
+275,1320,882,50,Keypress h
+276,1320,882,50,Keypress space
+277,1320,882,50,Keypress q
+278,1320,882,50,Keypress enter
+279,1320,882,50,Keypress m
+280,1320,882,50,Keypress g
+281,1320,882,50,Keypress r
+282,1320,882,50,Keypress space
+283,1320,882,50,Keypress q
+284,1320,882,50,Keypress space
+285,1320,882,50,Keypress 9
+286,1320,882,50,Keypress 0
+287,1320,882,50,Keypress enter
+288,322,476,50,Left Click Down
+289,322,476,50,Left Click Release
+290,322,476,50,Left Click Down
+291,322,476,50,Left Click Release
+292,322,476,200,Keypress 1
+293,322,476,200,Keypress .
+294,322,476,200,Keypress 5
+295,322,476,50,Keypress enter
+296,-254,408,50,Right Click Down
+297,-254,408,50,Right Click Release
+298,-222,447,50,Left Click Down
+299,-222,447,50,Left Click Release
+300,-222,447,50,Keypress 1
+301,-222,447,50,Keypress .
+302,-222,447,50,Keypress 5
+303,-222,447,50,Keypress r
+304,-222,447,500,Keypress enter
+305,-222,447,500,Keypress enter
+306,1182,902,50,Left Click Down
+307,1182,902,50,Left Click Release
+308,1182,903,50,Keypress m
+309,1182,903,50,Keypress g
+310,1182,903,50,Keypress h
+311,1182,903,50,Keypress space
+312,1182,903,50,Keypress q
+313,1182,903,50,Keypress enter
+314,1182,903,50,Keypress m
+315,1182,903,50,Keypress g
+316,1182,903,50,Keypress r
+317,1182,903,50,Keypress space
+318,1182,903,50,Keypress h
+319,1182,903,50,Keypress space
+320,1182,903,50,Keypress 9
+321,1182,903,50,Keypress 0
+322,1182,903,50,Keypress enter
+323,-174,543,50,Right Click Down
+324,-174,543,50,Right Click Release
+325,-174,578,50,Left Click Down
+326,-174,578,50,Left Click Release
+327,-174,578,50,Keypress 1
+328,-174,578,50,Keypress .
+329,-174,578,50,Keypress 5
+330,-174,578,50,Keypress s
+331,-174,578,500,Keypress enter
+332,-174,578,500,Keypress enter
+333,1241,959,50,Left Click Down
+334,1241,959,50,Left Click Release
+335,1241,959,50,Keypress m
+336,1241,959,50,Keypress g
+337,1241,959,50,Keypress r
+338,1241,959,50,Keypress space
+339,1241,959,50,Keypress q
+340,1241,959,50,Keypress space
+341,1241,959,50,Keypress 9
+342,1241,959,50,Keypress 0
+343,1241,959,50,Keypress enter
+344,-389,511,50,Right Click Down
+345,-389,511,50,Right Click Release
+346,-370,544,50,Left Click Down
+347,-370,544,50,Left Click Release
+348,-370,544,50,Keypress 1
+349,-370,544,50,Keypress .
+350,-370,544,50,Keypress 5
+351,-370,544,500,Keypress enter
+352,-370,544,500,Keypress enter
+353,-1869,57,50,Left Click Down
+354,-1873,66,50,Left Click Release
+355,1320,882,50,Left Click Down
+356,1320,882,50,Left Click Release
+357,1320,882,50,Keypress m
+358,1320,882,50,Keypress g
+359,1320,882,50,Keypress h
+360,1320,882,50,Keypress space
+361,1320,882,50,Keypress h
+362,1320,882,50,Keypress enter
+363,1320,882,50,Keypress m
+364,1320,882,50,Keypress g
+365,1320,882,50,Keypress h
+366,1320,882,50,Keypress space
+367,1320,882,50,Keypress q
+368,1320,882,50,Keypress enter
+369,1320,882,50,Keypress m
+370,1320,882,50,Keypress g
+371,1320,882,50,Keypress r
+372,1320,882,50,Keypress space
+373,1320,882,50,Keypress q
+374,1320,882,50,Keypress space
+375,1320,882,50,Keypress 9
+376,1320,882,50,Keypress 0
+377,1320,882,50,Keypress enter
+378,322,476,50,Left Click Down
+379,322,476,50,Left Click Release
+380,322,476,50,Left Click Down
+381,322,476,50,Left Click Release
+382,322,476,200,Keypress 2
+383,322,476,50,Keypress enter
+384,-254,408,50,Right Click Down
+385,-254,408,50,Right Click Release
+386,-222,447,50,Left Click Down
+387,-222,447,50,Left Click Release
+388,-222,447,50,Keypress 2
+389,-222,447,50,Keypress r
+390,-222,447,500,Keypress enter
+391,-222,447,500,Keypress enter
+392,1182,902,50,Left Click Down
+393,1182,902,50,Left Click Release
+394,1182,903,50,Keypress m
+395,1182,903,50,Keypress g
+396,1182,903,50,Keypress h
+397,1182,903,50,Keypress space
+398,1182,903,50,Keypress q
+399,1182,903,50,Keypress enter
+400,1182,903,50,Keypress m
+401,1182,903,50,Keypress g
+402,1182,903,50,Keypress r
+403,1182,903,50,Keypress space
+404,1182,903,50,Keypress h
+405,1182,903,50,Keypress space
+406,1182,903,50,Keypress 9
+407,1182,903,50,Keypress 0
+408,1182,903,50,Keypress enter
+409,-174,543,50,Right Click Down
+410,-174,543,50,Right Click Release
+411,-174,578,50,Left Click Down
+412,-174,578,50,Left Click Release
+413,-174,578,50,Keypress 2
+414,-174,578,50,Keypress s
+415,-174,578,500,Keypress enter
+416,-174,578,500,Keypress enter
+417,1241,959,50,Left Click Down
+418,1241,959,50,Left Click Release
+419,1241,959,50,Keypress m
+420,1241,959,50,Keypress g
+421,1241,959,50,Keypress r
+422,1241,959,50,Keypress space
+423,1241,959,50,Keypress q
+424,1241,959,50,Keypress space
+425,1241,959,50,Keypress 9
+426,1241,959,50,Keypress 0
+427,1241,959,50,Keypress enter
+428,-389,511,50,Right Click Down
+429,-389,511,50,Right Click Release
+430,-370,544,50,Left Click Down
+431,-370,544,50,Left Click Release
+432,-370,544,50,Keypress 2
+433,-370,544,500,Keypress enter
+434,-370,544,500,Keypress enter
+435,-1869,57,50,Left Click Down
+436,-1873,66,50,Left Click Release
+437,1320,882,50,Left Click Down
+438,1320,882,50,Left Click Release
+439,1320,882,50,Keypress m
+440,1320,882,50,Keypress g
+441,1320,882,50,Keypress h
+442,1320,882,50,Keypress space
+443,1320,882,50,Keypress h
+444,1320,882,50,Keypress enter
+445,1320,882,50,Keypress m
+446,1320,882,50,Keypress g
+447,1320,882,50,Keypress h
+448,1320,882,50,Keypress space
+449,1320,882,50,Keypress q
+450,1320,882,50,Keypress enter
+451,1320,882,50,Keypress m
+452,1320,882,50,Keypress g
+453,1320,882,50,Keypress r
+454,1320,882,50,Keypress space
+455,1320,882,50,Keypress q
+456,1320,882,50,Keypress space
+457,1320,882,50,Keypress 9
+458,1320,882,50,Keypress 0
+459,1320,882,50,Keypress enter
+460,322,476,50,Left Click Down
+461,322,476,50,Left Click Release
+462,322,476,50,Left Click Down
+463,322,476,50,Left Click Release
+464,322,476,200,Keypress 2
+465,322,476,200,Keypress .
+466,322,476,200,Keypress 5
+467,322,476,50,Keypress enter
+468,-254,408,50,Right Click Down
+469,-254,408,50,Right Click Release
+470,-222,447,50,Left Click Down
+471,-222,447,50,Left Click Release
+472,-222,447,50,Keypress 2
+473,-222,447,50,Keypress .
+474,-222,447,50,Keypress 5
+475,-222,447,50,Keypress r
+476,-222,447,500,Keypress enter
+477,-222,447,500,Keypress enter
+478,1182,902,50,Left Click Down
+479,1182,902,50,Left Click Release
+480,1182,903,50,Keypress m
+481,1182,903,50,Keypress g
+482,1182,903,50,Keypress h
+483,1182,903,50,Keypress space
+484,1182,903,50,Keypress q
+485,1182,903,50,Keypress enter
+486,1182,903,50,Keypress m
+487,1182,903,50,Keypress g
+488,1182,903,50,Keypress r
+489,1182,903,50,Keypress space
+490,1182,903,50,Keypress h
+491,1182,903,50,Keypress space
+492,1182,903,50,Keypress 9
+493,1182,903,50,Keypress 0
+494,1182,903,50,Keypress enter
+495,-174,543,50,Right Click Down
+496,-174,543,50,Right Click Release
+497,-174,578,50,Left Click Down
+498,-174,578,50,Left Click Release
+499,-174,578,50,Keypress 2
+500,-174,578,50,Keypress .
+501,-174,578,50,Keypress 5
+502,-174,578,50,Keypress s
+503,-174,578,500,Keypress enter
+504,-174,578,500,Keypress enter
+505,1241,959,50,Left Click Down
+506,1241,959,50,Left Click Release
+507,1241,959,50,Keypress m
+508,1241,959,50,Keypress g
+509,1241,959,50,Keypress r
+510,1241,959,50,Keypress space
+511,1241,959,50,Keypress q
+512,1241,959,50,Keypress space
+513,1241,959,50,Keypress 9
+514,1241,959,50,Keypress 0
+515,1241,959,50,Keypress enter
+516,-389,511,50,Right Click Down
+517,-389,511,50,Right Click Release
+518,-370,544,50,Left Click Down
+519,-370,544,50,Left Click Release
+520,-370,544,50,Keypress 2
+521,-370,544,50,Keypress .
+522,-370,544,50,Keypress 5
+523,-370,544,500,Keypress enter
+524,-370,544,500,Keypress enter
+525,-1869,57,50,Left Click Down
+526,-1873,66,50,Left Click Release
+527,1320,882,50,Left Click Down
+528,1320,882,50,Left Click Release
+529,1320,882,50,Keypress m
+530,1320,882,50,Keypress g
+531,1320,882,50,Keypress h
+532,1320,882,50,Keypress space
+533,1320,882,50,Keypress h
+534,1320,882,50,Keypress enter
+535,1320,882,50,Keypress m
+536,1320,882,50,Keypress g
+537,1320,882,50,Keypress h
+538,1320,882,50,Keypress space
+539,1320,882,50,Keypress q
+540,1320,882,50,Keypress enter
+541,1320,882,50,Keypress m
+542,1320,882,50,Keypress g
+543,1320,882,50,Keypress r
+544,1320,882,50,Keypress space
+545,1320,882,50,Keypress q
+546,1320,882,50,Keypress space
+547,1320,882,50,Keypress 9
+548,1320,882,50,Keypress 0
+549,1320,882,50,Keypress enter
+550,322,476,50,Left Click Down
+551,322,476,50,Left Click Release
+552,322,476,50,Left Click Down
+553,322,476,50,Left Click Release
+554,322,476,200,Keypress 3
+555,322,476,50,Keypress enter
+556,-254,408,50,Right Click Down
+557,-254,408,50,Right Click Release
+558,-222,447,50,Left Click Down
+559,-222,447,50,Left Click Release
+560,-222,447,50,Keypress 3
+561,-222,447,50,Keypress r
+562,-222,447,500,Keypress enter
+563,-222,447,500,Keypress enter
+564,1182,902,50,Left Click Down
+565,1182,902,50,Left Click Release
+566,1182,903,50,Keypress m
+567,1182,903,50,Keypress g
+568,1182,903,50,Keypress h
+569,1182,903,50,Keypress space
+570,1182,903,50,Keypress q
+571,1182,903,50,Keypress enter
+572,1182,903,50,Keypress m
+573,1182,903,50,Keypress g
+574,1182,903,50,Keypress r
+575,1182,903,50,Keypress space
+576,1182,903,50,Keypress h
+577,1182,903,50,Keypress space
+578,1182,903,50,Keypress 9
+579,1182,903,50,Keypress 0
+580,1182,903,50,Keypress enter
+581,-174,543,50,Right Click Down
+582,-174,543,50,Right Click Release
+583,-174,578,50,Left Click Down
+584,-174,578,50,Left Click Release
+585,-174,578,50,Keypress 3
+586,-174,578,50,Keypress s
+587,-174,578,500,Keypress enter
+588,-174,578,500,Keypress enter
+589,1241,959,50,Left Click Down
+590,1241,959,50,Left Click Release
+591,1241,959,50,Keypress m
+592,1241,959,50,Keypress g
+593,1241,959,50,Keypress r
+594,1241,959,50,Keypress space
+595,1241,959,50,Keypress q
+596,1241,959,50,Keypress space
+597,1241,959,50,Keypress 9
+598,1241,959,50,Keypress 0
+599,1241,959,50,Keypress enter
+600,-389,511,50,Right Click Down
+601,-389,511,50,Right Click Release
+602,-370,544,50,Left Click Down
+603,-370,544,50,Left Click Release
+604,-370,544,50,Keypress 3
+605,-370,544,500,Keypress enter
+606,-370,544,500,Keypress enter
+607,-1869,57,50,Left Click Down
+608,-1873,66,50,Left Click Release
+609,1320,882,50,Left Click Down
+610,1320,882,50,Left Click Release
+611,1320,882,50,Keypress m
+612,1320,882,50,Keypress g
+613,1320,882,50,Keypress h
+614,1320,882,50,Keypress space
+615,1320,882,50,Keypress h
+616,1320,882,50,Keypress enter
+617,1320,882,50,Keypress m
+618,1320,882,50,Keypress g
+619,1320,882,50,Keypress h
+620,1320,882,50,Keypress space
+621,1320,882,50,Keypress q
+622,1320,882,50,Keypress enter
+623,1320,882,50,Keypress m
+624,1320,882,50,Keypress g
+625,1320,882,50,Keypress r
+626,1320,882,50,Keypress space
+627,1320,882,50,Keypress q
+628,1320,882,50,Keypress space
+629,1320,882,50,Keypress 9
+630,1320,882,50,Keypress 0
+631,1320,882,50,Keypress enter
+632,322,476,50,Left Click Down
+633,322,476,50,Left Click Release
+634,322,476,50,Left Click Down
+635,322,476,50,Left Click Release
+636,322,476,200,Keypress 3
+637,322,476,200,Keypress .
+638,322,476,200,Keypress 5
+639,322,476,50,Keypress enter
+640,-254,408,50,Right Click Down
+641,-254,408,50,Right Click Release
+642,-222,447,50,Left Click Down
+643,-222,447,50,Left Click Release
+644,-222,447,50,Keypress 3
+645,-222,447,50,Keypress .
+646,-222,447,50,Keypress 5
+647,-222,447,50,Keypress r
+648,-222,447,500,Keypress enter
+649,-222,447,500,Keypress enter
+650,1182,902,50,Left Click Down
+651,1182,902,50,Left Click Release
+652,1182,903,50,Keypress m
+653,1182,903,50,Keypress g
+654,1182,903,50,Keypress h
+655,1182,903,50,Keypress space
+656,1182,903,50,Keypress q
+657,1182,903,50,Keypress enter
+658,1182,903,50,Keypress m
+659,1182,903,50,Keypress g
+660,1182,903,50,Keypress r
+661,1182,903,50,Keypress space
+662,1182,903,50,Keypress h
+663,1182,903,50,Keypress space
+664,1182,903,50,Keypress 9
+665,1182,903,50,Keypress 0
+666,1182,903,50,Keypress enter
+667,-174,543,50,Right Click Down
+668,-174,543,50,Right Click Release
+669,-174,578,50,Left Click Down
+670,-174,578,50,Left Click Release
+671,-174,578,50,Keypress 3
+672,-174,578,50,Keypress .
+673,-174,578,50,Keypress 5
+674,-174,578,50,Keypress s
+675,-174,578,500,Keypress enter
+676,-174,578,500,Keypress enter
+677,1241,959,50,Left Click Down
+678,1241,959,50,Left Click Release
+679,1241,959,50,Keypress m
+680,1241,959,50,Keypress g
+681,1241,959,50,Keypress r
+682,1241,959,50,Keypress space
+683,1241,959,50,Keypress q
+684,1241,959,50,Keypress space
+685,1241,959,50,Keypress 9
+686,1241,959,50,Keypress 0
+687,1241,959,50,Keypress enter
+688,-389,511,50,Right Click Down
+689,-389,511,50,Right Click Release
+690,-370,544,50,Left Click Down
+691,-370,544,50,Left Click Release
+692,-370,544,50,Keypress 3
+693,-370,544,50,Keypress .
+694,-370,544,50,Keypress 5
+695,-370,544,500,Keypress enter
+696,-370,544,500,Keypress enter
+697,-1869,57,50,Left Click Down
+698,-1873,66,50,Left Click Release
+699,1320,882,50,Left Click Down
+700,1320,882,50,Left Click Release
+701,1320,882,50,Keypress m
+702,1320,882,50,Keypress g
+703,1320,882,50,Keypress h
+704,1320,882,50,Keypress space
+705,1320,882,50,Keypress h
+706,1320,882,50,Keypress enter
+707,1320,882,50,Keypress m
+708,1320,882,50,Keypress g
+709,1320,882,50,Keypress h
+710,1320,882,50,Keypress space
+711,1320,882,50,Keypress q
+712,1320,882,50,Keypress enter
+713,1320,882,50,Keypress m
+714,1320,882,50,Keypress g
+715,1320,882,50,Keypress r
+716,1320,882,50,Keypress space
+717,1320,882,50,Keypress q
+718,1320,882,50,Keypress space
+719,1320,882,50,Keypress 9
+720,1320,882,50,Keypress 0
+721,1320,882,50,Keypress enter
+722,322,476,50,Left Click Down
+723,322,476,50,Left Click Release
+724,322,476,50,Left Click Down
+725,322,476,50,Left Click Release
+726,322,476,200,Keypress 4
+727,322,476,50,Keypress enter
+728,-254,408,50,Right Click Down
+729,-254,408,50,Right Click Release
+730,-222,447,50,Left Click Down
+731,-222,447,50,Left Click Release
+732,-222,447,50,Keypress 4
+733,-222,447,50,Keypress r
+734,-222,447,500,Keypress enter
+735,-222,447,500,Keypress enter
+736,1182,902,50,Left Click Down
+737,1182,902,50,Left Click Release
+738,1182,903,50,Keypress m
+739,1182,903,50,Keypress g
+740,1182,903,50,Keypress h
+741,1182,903,50,Keypress space
+742,1182,903,50,Keypress q
+743,1182,903,50,Keypress enter
+744,1182,903,50,Keypress m
+745,1182,903,50,Keypress g
+746,1182,903,50,Keypress r
+747,1182,903,50,Keypress space
+748,1182,903,50,Keypress h
+749,1182,903,50,Keypress space
+750,1182,903,50,Keypress 9
+751,1182,903,50,Keypress 0
+752,1182,903,50,Keypress enter
+753,-174,543,50,Right Click Down
+754,-174,543,50,Right Click Release
+755,-174,578,50,Left Click Down
+756,-174,578,50,Left Click Release
+757,-174,578,50,Keypress 4
+758,-174,578,50,Keypress s
+759,-174,578,500,Keypress enter
+760,-174,578,500,Keypress enter
+761,1241,959,50,Left Click Down
+762,1241,959,50,Left Click Release
+763,1241,959,50,Keypress m
+764,1241,959,50,Keypress g
+765,1241,959,50,Keypress r
+766,1241,959,50,Keypress space
+767,1241,959,50,Keypress q
+768,1241,959,50,Keypress space
+769,1241,959,50,Keypress 9
+770,1241,959,50,Keypress 0
+771,1241,959,50,Keypress enter
+772,-389,511,50,Right Click Down
+773,-389,511,50,Right Click Release
+774,-370,544,50,Left Click Down
+775,-370,544,50,Left Click Release
+776,-370,544,50,Keypress 4
+777,-370,544,500,Keypress enter
+778,-370,544,500,Keypress enter
+779,-1869,57,50,Left Click Down
+780,-1873,66,50,Left Click Release
+781,1320,882,50,Left Click Down
+782,1320,882,50,Left Click Release
+783,1320,882,50,Keypress m
+784,1320,882,50,Keypress g
+785,1320,882,50,Keypress h
+786,1320,882,50,Keypress space
+787,1320,882,50,Keypress h
+788,1320,882,50,Keypress enter
+789,1320,882,50,Keypress m
+790,1320,882,50,Keypress g
+791,1320,882,50,Keypress h
+792,1320,882,50,Keypress space
+793,1320,882,50,Keypress q
+794,1320,882,50,Keypress enter
+795,1320,882,50,Keypress m
+796,1320,882,50,Keypress g
+797,1320,882,50,Keypress r
+798,1320,882,50,Keypress space
+799,1320,882,50,Keypress q
+800,1320,882,50,Keypress space
+801,1320,882,50,Keypress 9
+802,1320,882,50,Keypress 0
+803,1320,882,50,Keypress enter
+804,322,476,50,Left Click Down
+805,322,476,50,Left Click Release
+806,322,476,50,Left Click Down
+807,322,476,50,Left Click Release
+808,322,476,200,Keypress 4
+809,322,476,200,Keypress .
+810,322,476,200,Keypress 5
+811,322,476,50,Keypress enter
+812,-254,408,50,Right Click Down
+813,-254,408,50,Right Click Release
+814,-222,447,50,Left Click Down
+815,-222,447,50,Left Click Release
+816,-222,447,50,Keypress 4
+817,-222,447,50,Keypress .
+818,-222,447,50,Keypress 5
+819,-222,447,50,Keypress r
+820,-222,447,500,Keypress enter
+821,-222,447,500,Keypress enter
+822,1182,902,50,Left Click Down
+823,1182,902,50,Left Click Release
+824,1182,903,50,Keypress m
+825,1182,903,50,Keypress g
+826,1182,903,50,Keypress h
+827,1182,903,50,Keypress space
+828,1182,903,50,Keypress q
+829,1182,903,50,Keypress enter
+830,1182,903,50,Keypress m
+831,1182,903,50,Keypress g
+832,1182,903,50,Keypress r
+833,1182,903,50,Keypress space
+834,1182,903,50,Keypress h
+835,1182,903,50,Keypress space
+836,1182,903,50,Keypress 9
+837,1182,903,50,Keypress 0
+838,1182,903,50,Keypress enter
+839,-174,543,50,Right Click Down
+840,-174,543,50,Right Click Release
+841,-174,578,50,Left Click Down
+842,-174,578,50,Left Click Release
+843,-174,578,50,Keypress 4
+844,-174,578,50,Keypress .
+845,-174,578,50,Keypress 5
+846,-174,578,50,Keypress s
+847,-174,578,500,Keypress enter
+848,-174,578,500,Keypress enter
+849,1241,959,50,Left Click Down
+850,1241,959,50,Left Click Release
+851,1241,959,50,Keypress m
+852,1241,959,50,Keypress g
+853,1241,959,50,Keypress r
+854,1241,959,50,Keypress space
+855,1241,959,50,Keypress q
+856,1241,959,50,Keypress space
+857,1241,959,50,Keypress 9
+858,1241,959,50,Keypress 0
+859,1241,959,50,Keypress enter
+860,-389,511,50,Right Click Down
+861,-389,511,50,Right Click Release
+862,-370,544,50,Left Click Down
+863,-370,544,50,Left Click Release
+864,-370,544,50,Keypress 4
+865,-370,544,50,Keypress .
+866,-370,544,50,Keypress 5
+867,-370,544,500,Keypress enter
+868,-370,544,500,Keypress enter
+869,-1869,57,50,Left Click Down
+870,-1873,66,50,Left Click Release
+871,1320,882,50,Left Click Down
+872,1320,882,50,Left Click Release
+873,1320,882,50,Keypress m
+874,1320,882,50,Keypress g
+875,1320,882,50,Keypress h
+876,1320,882,50,Keypress space
+877,1320,882,50,Keypress h
+878,1320,882,50,Keypress enter
+879,1320,882,50,Keypress m
+880,1320,882,50,Keypress g
+881,1320,882,50,Keypress h
+882,1320,882,50,Keypress space
+883,1320,882,50,Keypress q
+884,1320,882,50,Keypress enter
+885,1320,882,50,Keypress m
+886,1320,882,50,Keypress g
+887,1320,882,50,Keypress r
+888,1320,882,50,Keypress space
+889,1320,882,50,Keypress q
+890,1320,882,50,Keypress space
+891,1320,882,50,Keypress 9
+892,1320,882,50,Keypress 0
+893,1320,882,50,Keypress enter
+894,322,476,50,Left Click Down
+895,322,476,50,Left Click Release
+896,322,476,50,Left Click Down
+897,322,476,50,Left Click Release
+898,322,476,200,Keypress 5
+899,322,476,50,Keypress enter
+900,-254,408,50,Right Click Down
+901,-254,408,50,Right Click Release
+902,-222,447,50,Left Click Down
+903,-222,447,50,Left Click Release
+904,-222,447,50,Keypress 5
+905,-222,447,50,Keypress r
+906,-222,447,500,Keypress enter
+907,-222,447,500,Keypress enter
+908,1182,902,50,Left Click Down
+909,1182,902,50,Left Click Release
+910,1182,903,50,Keypress m
+911,1182,903,50,Keypress g
+912,1182,903,50,Keypress h
+913,1182,903,50,Keypress space
+914,1182,903,50,Keypress q
+915,1182,903,50,Keypress enter
+916,1182,903,50,Keypress m
+917,1182,903,50,Keypress g
+918,1182,903,50,Keypress r
+919,1182,903,50,Keypress space
+920,1182,903,50,Keypress h
+921,1182,903,50,Keypress space
+922,1182,903,50,Keypress 9
+923,1182,903,50,Keypress 0
+924,1182,903,50,Keypress enter
+925,-174,543,50,Right Click Down
+926,-174,543,50,Right Click Release
+927,-174,578,50,Left Click Down
+928,-174,578,50,Left Click Release
+929,-174,578,50,Keypress 5
+930,-174,578,50,Keypress s
+931,-174,578,500,Keypress enter
+932,-174,578,500,Keypress enter
+933,1241,959,50,Left Click Down
+934,1241,959,50,Left Click Release
+935,1241,959,50,Keypress m
+936,1241,959,50,Keypress g
+937,1241,959,50,Keypress r
+938,1241,959,50,Keypress space
+939,1241,959,50,Keypress q
+940,1241,959,50,Keypress space
+941,1241,959,50,Keypress 9
+942,1241,959,50,Keypress 0
+943,1241,959,50,Keypress enter
+944,-389,511,50,Right Click Down
+945,-389,511,50,Right Click Release
+946,-370,544,50,Left Click Down
+947,-370,544,50,Left Click Release
+948,-370,544,50,Keypress 5
+949,-370,544,500,Keypress enter
+950,-370,544,500,Keypress enter
+951,-1869,57,50,Left Click Down
+952,-1873,66,50,Left Click Release
+953,1320,882,50,Left Click Down
+954,1320,882,50,Left Click Release
+955,1320,882,50,Keypress m
+956,1320,882,50,Keypress g
+957,1320,882,50,Keypress h
+958,1320,882,50,Keypress space
+959,1320,882,50,Keypress h
+960,1320,882,50,Keypress enter
+961,1320,882,50,Keypress m
+962,1320,882,50,Keypress g
+963,1320,882,50,Keypress h
+964,1320,882,50,Keypress space
+965,1320,882,50,Keypress q
+966,1320,882,50,Keypress enter
+967,1320,882,50,Keypress m
+968,1320,882,50,Keypress g
+969,1320,882,50,Keypress r
+970,1320,882,50,Keypress space
+971,1320,882,50,Keypress q
+972,1320,882,50,Keypress space
+973,1320,882,50,Keypress 9
+974,1320,882,50,Keypress 0
+975,1320,882,50,Keypress enter
+976,322,476,50,Left Click Down
+977,322,476,50,Left Click Release
+978,322,476,50,Left Click Down
+979,322,476,50,Left Click Release
+980,322,476,200,Keypress 5
+981,322,476,200,Keypress .
+982,322,476,200,Keypress 5
+983,322,476,50,Keypress enter
+984,-254,408,50,Right Click Down
+985,-254,408,50,Right Click Release
+986,-222,447,50,Left Click Down
+987,-222,447,50,Left Click Release
+988,-222,447,50,Keypress 5
+989,-222,447,50,Keypress .
+990,-222,447,50,Keypress 5
+991,-222,447,50,Keypress r
+992,-222,447,500,Keypress enter
+993,-222,447,500,Keypress enter
+994,1182,902,50,Left Click Down
+995,1182,902,50,Left Click Release
+996,1182,903,50,Keypress m
+997,1182,903,50,Keypress g
+998,1182,903,50,Keypress h
+999,1182,903,50,Keypress space
+1000,1182,903,50,Keypress q
+1001,1182,903,50,Keypress enter
+1002,1182,903,50,Keypress m
+1003,1182,903,50,Keypress g
+1004,1182,903,50,Keypress r
+1005,1182,903,50,Keypress space
+1006,1182,903,50,Keypress h
+1007,1182,903,50,Keypress space
+1008,1182,903,50,Keypress 9
+1009,1182,903,50,Keypress 0
+1010,1182,903,50,Keypress enter
+1011,-174,543,50,Right Click Down
+1012,-174,543,50,Right Click Release
+1013,-174,578,50,Left Click Down
+1014,-174,578,50,Left Click Release
+1015,-174,578,50,Keypress 5
+1016,-174,578,50,Keypress .
+1017,-174,578,50,Keypress 5
+1018,-174,578,50,Keypress s
+1019,-174,578,500,Keypress enter
+1020,-174,578,500,Keypress enter
+1021,1241,959,50,Left Click Down
+1022,1241,959,50,Left Click Release
+1023,1241,959,50,Keypress m
+1024,1241,959,50,Keypress g
+1025,1241,959,50,Keypress r
+1026,1241,959,50,Keypress space
+1027,1241,959,50,Keypress q
+1028,1241,959,50,Keypress space
+1029,1241,959,50,Keypress 9
+1030,1241,959,50,Keypress 0
+1031,1241,959,50,Keypress enter
+1032,-389,511,50,Right Click Down
+1033,-389,511,50,Right Click Release
+1034,-370,544,50,Left Click Down
+1035,-370,544,50,Left Click Release
+1036,-370,544,50,Keypress 5
+1037,-370,544,50,Keypress .
+1038,-370,544,50,Keypress 5
+1039,-370,544,500,Keypress enter
+1040,-370,544,500,Keypress enter
+1041,-1869,57,50,Left Click Down
+1042,-1873,66,50,Left Click Release
+1043,1320,882,50,Left Click Down
+1044,1320,882,50,Left Click Release
+1045,1320,882,50,Keypress m
+1046,1320,882,50,Keypress g
+1047,1320,882,50,Keypress h
+1048,1320,882,50,Keypress space
+1049,1320,882,50,Keypress h
+1050,1320,882,50,Keypress enter
+1051,1320,882,50,Keypress m
+1052,1320,882,50,Keypress g
+1053,1320,882,50,Keypress h
+1054,1320,882,50,Keypress space
+1055,1320,882,50,Keypress q
+1056,1320,882,50,Keypress enter
+1057,1320,882,50,Keypress m
+1058,1320,882,50,Keypress g
+1059,1320,882,50,Keypress r
+1060,1320,882,50,Keypress space
+1061,1320,882,50,Keypress q
+1062,1320,882,50,Keypress space
+1063,1320,882,50,Keypress 9
+1064,1320,882,50,Keypress 0
+1065,1320,882,50,Keypress enter
+1066,322,476,50,Left Click Down
+1067,322,476,50,Left Click Release
+1068,322,476,50,Left Click Down
+1069,322,476,50,Left Click Release
+1070,322,476,200,Keypress 6
+1071,322,476,50,Keypress enter
+1072,-254,408,50,Right Click Down
+1073,-254,408,50,Right Click Release
+1074,-222,447,50,Left Click Down
+1075,-222,447,50,Left Click Release
+1076,-222,447,50,Keypress 6
+1077,-222,447,50,Keypress r
+1078,-222,447,500,Keypress enter
+1079,-222,447,500,Keypress enter
+1080,1182,902,50,Left Click Down
+1081,1182,902,50,Left Click Release
+1082,1182,903,50,Keypress m
+1083,1182,903,50,Keypress g
+1084,1182,903,50,Keypress h
+1085,1182,903,50,Keypress space
+1086,1182,903,50,Keypress q
+1087,1182,903,50,Keypress enter
+1088,1182,903,50,Keypress m
+1089,1182,903,50,Keypress g
+1090,1182,903,50,Keypress r
+1091,1182,903,50,Keypress space
+1092,1182,903,50,Keypress h
+1093,1182,903,50,Keypress space
+1094,1182,903,50,Keypress 9
+1095,1182,903,50,Keypress 0
+1096,1182,903,50,Keypress enter
+1097,-174,543,50,Right Click Down
+1098,-174,543,50,Right Click Release
+1099,-174,578,50,Left Click Down
+1100,-174,578,50,Left Click Release
+1101,-174,578,50,Keypress 6
+1102,-174,578,50,Keypress s
+1103,-174,578,500,Keypress enter
+1104,-174,578,500,Keypress enter
+1105,1241,959,50,Left Click Down
+1106,1241,959,50,Left Click Release
+1107,1241,959,50,Keypress m
+1108,1241,959,50,Keypress g
+1109,1241,959,50,Keypress r
+1110,1241,959,50,Keypress space
+1111,1241,959,50,Keypress q
+1112,1241,959,50,Keypress space
+1113,1241,959,50,Keypress 9
+1114,1241,959,50,Keypress 0
+1115,1241,959,50,Keypress enter
+1116,-389,511,50,Right Click Down
+1117,-389,511,50,Right Click Release
+1118,-370,544,50,Left Click Down
+1119,-370,544,50,Left Click Release
+1120,-370,544,50,Keypress 6
+1121,-370,544,500,Keypress enter
+1122,-370,544,500,Keypress enter
+1123,-1869,57,50,Left Click Down
+1124,-1873,66,50,Left Click Release
+1125,1320,882,50,Left Click Down
+1126,1320,882,50,Left Click Release
+1127,1320,882,50,Keypress m
+1128,1320,882,50,Keypress g
+1129,1320,882,50,Keypress h
+1130,1320,882,50,Keypress space
+1131,1320,882,50,Keypress h
+1132,1320,882,50,Keypress enter
+1133,1320,882,50,Keypress m
+1134,1320,882,50,Keypress g
+1135,1320,882,50,Keypress h
+1136,1320,882,50,Keypress space
+1137,1320,882,50,Keypress q
+1138,1320,882,50,Keypress enter
+1139,1320,882,50,Keypress m
+1140,1320,882,50,Keypress g
+1141,1320,882,50,Keypress r
+1142,1320,882,50,Keypress space
+1143,1320,882,50,Keypress q
+1144,1320,882,50,Keypress space
+1145,1320,882,50,Keypress 9
+1146,1320,882,50,Keypress 0
+1147,1320,882,50,Keypress enter
+1148,322,476,50,Left Click Down
+1149,322,476,50,Left Click Release
+1150,322,476,50,Left Click Down
+1151,322,476,50,Left Click Release
+1152,322,476,200,Keypress 6
+1153,322,476,200,Keypress .
+1154,322,476,200,Keypress 5
+1155,322,476,50,Keypress enter
+1156,-254,408,50,Right Click Down
+1157,-254,408,50,Right Click Release
+1158,-222,447,50,Left Click Down
+1159,-222,447,50,Left Click Release
+1160,-222,447,50,Keypress 6
+1161,-222,447,50,Keypress .
+1162,-222,447,50,Keypress 5
+1163,-222,447,50,Keypress r
+1164,-222,447,500,Keypress enter
+1165,-222,447,500,Keypress enter
+1166,1182,902,50,Left Click Down
+1167,1182,902,50,Left Click Release
+1168,1182,903,50,Keypress m
+1169,1182,903,50,Keypress g
+1170,1182,903,50,Keypress h
+1171,1182,903,50,Keypress space
+1172,1182,903,50,Keypress q
+1173,1182,903,50,Keypress enter
+1174,1182,903,50,Keypress m
+1175,1182,903,50,Keypress g
+1176,1182,903,50,Keypress r
+1177,1182,903,50,Keypress space
+1178,1182,903,50,Keypress h
+1179,1182,903,50,Keypress space
+1180,1182,903,50,Keypress 9
+1181,1182,903,50,Keypress 0
+1182,1182,903,50,Keypress enter
+1183,-174,543,50,Right Click Down
+1184,-174,543,50,Right Click Release
+1185,-174,578,50,Left Click Down
+1186,-174,578,50,Left Click Release
+1187,-174,578,50,Keypress 6
+1188,-174,578,50,Keypress .
+1189,-174,578,50,Keypress 5
+1190,-174,578,50,Keypress s
+1191,-174,578,500,Keypress enter
+1192,-174,578,500,Keypress enter
+1193,1241,959,50,Left Click Down
+1194,1241,959,50,Left Click Release
+1195,1241,959,50,Keypress m
+1196,1241,959,50,Keypress g
+1197,1241,959,50,Keypress r
+1198,1241,959,50,Keypress space
+1199,1241,959,50,Keypress q
+1200,1241,959,50,Keypress space
+1201,1241,959,50,Keypress 9
+1202,1241,959,50,Keypress 0
+1203,1241,959,50,Keypress enter
+1204,-389,511,50,Right Click Down
+1205,-389,511,50,Right Click Release
+1206,-370,544,50,Left Click Down
+1207,-370,544,50,Left Click Release
+1208,-370,544,50,Keypress 6
+1209,-370,544,50,Keypress .
+1210,-370,544,50,Keypress 5
+1211,-370,544,500,Keypress enter
+1212,-370,544,500,Keypress enter
+1213,-1869,57,50,Left Click Down
+1214,-1873,66,50,Left Click Release
+1215,1320,882,50,Left Click Down
+1216,1320,882,50,Left Click Release
+1217,1320,882,50,Keypress m
+1218,1320,882,50,Keypress g
+1219,1320,882,50,Keypress h
+1220,1320,882,50,Keypress space
+1221,1320,882,50,Keypress h
+1222,1320,882,50,Keypress enter
+1223,1320,882,50,Keypress m
+1224,1320,882,50,Keypress g
+1225,1320,882,50,Keypress h
+1226,1320,882,50,Keypress space
+1227,1320,882,50,Keypress q
+1228,1320,882,50,Keypress enter
+1229,1320,882,50,Keypress m
+1230,1320,882,50,Keypress g
+1231,1320,882,50,Keypress r
+1232,1320,882,50,Keypress space
+1233,1320,882,50,Keypress q
+1234,1320,882,50,Keypress space
+1235,1320,882,50,Keypress 9
+1236,1320,882,50,Keypress 0
+1237,1320,882,50,Keypress enter
+1238,322,476,50,Left Click Down
+1239,322,476,50,Left Click Release
+1240,322,476,50,Left Click Down
+1241,322,476,50,Left Click Release
+1242,322,476,200,Keypress 7
+1243,322,476,50,Keypress enter
+1244,-254,408,50,Right Click Down
+1245,-254,408,50,Right Click Release
+1246,-222,447,50,Left Click Down
+1247,-222,447,50,Left Click Release
+1248,-222,447,50,Keypress 7
+1249,-222,447,50,Keypress r
+1250,-222,447,500,Keypress enter
+1251,-222,447,500,Keypress enter
+1252,1182,902,50,Left Click Down
+1253,1182,902,50,Left Click Release
+1254,1182,903,50,Keypress m
+1255,1182,903,50,Keypress g
+1256,1182,903,50,Keypress h
+1257,1182,903,50,Keypress space
+1258,1182,903,50,Keypress q
+1259,1182,903,50,Keypress enter
+1260,1182,903,50,Keypress m
+1261,1182,903,50,Keypress g
+1262,1182,903,50,Keypress r
+1263,1182,903,50,Keypress space
+1264,1182,903,50,Keypress h
+1265,1182,903,50,Keypress space
+1266,1182,903,50,Keypress 9
+1267,1182,903,50,Keypress 0
+1268,1182,903,50,Keypress enter
+1269,-174,543,50,Right Click Down
+1270,-174,543,50,Right Click Release
+1271,-174,578,50,Left Click Down
+1272,-174,578,50,Left Click Release
+1273,-174,578,50,Keypress 7
+1274,-174,578,50,Keypress s
+1275,-174,578,500,Keypress enter
+1276,-174,578,500,Keypress enter
+1277,1241,959,50,Left Click Down
+1278,1241,959,50,Left Click Release
+1279,1241,959,50,Keypress m
+1280,1241,959,50,Keypress g
+1281,1241,959,50,Keypress r
+1282,1241,959,50,Keypress space
+1283,1241,959,50,Keypress q
+1284,1241,959,50,Keypress space
+1285,1241,959,50,Keypress 9
+1286,1241,959,50,Keypress 0
+1287,1241,959,50,Keypress enter
+1288,-389,511,50,Right Click Down
+1289,-389,511,50,Right Click Release
+1290,-370,544,50,Left Click Down
+1291,-370,544,50,Left Click Release
+1292,-370,544,50,Keypress 7
+1293,-370,544,500,Keypress enter
+1294,-370,544,500,Keypress enter
+1295,-1869,57,50,Left Click Down
+1296,-1873,66,50,Left Click Release
+1297,1320,882,50,Left Click Down
+1298,1320,882,50,Left Click Release
+1299,1320,882,50,Keypress m
+1300,1320,882,50,Keypress g
+1301,1320,882,50,Keypress h
+1302,1320,882,50,Keypress space
+1303,1320,882,50,Keypress h
+1304,1320,882,50,Keypress enter
+1305,1320,882,50,Keypress m
+1306,1320,882,50,Keypress g
+1307,1320,882,50,Keypress h
+1308,1320,882,50,Keypress space
+1309,1320,882,50,Keypress q
+1310,1320,882,50,Keypress enter
+1311,359,457,50,Left Click Down
+1312,359,458,50,Mouse Movement
+1313,359,458,50,Left Click Release
