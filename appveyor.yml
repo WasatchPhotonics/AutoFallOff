@@ -58,17 +58,17 @@ after_test:
       --noconfirm \
       --clean \
       --windowed \
-      --icon pysideapp/assets/images/ApplicationIcon.ico \
+      --icon autofalloff/assets/images/ApplicationIcon.ico \
       --specpath scripts \
-      scripts/PySideApp.py"
+      scripts/AutoFallOff.py"
 
       
    - "iscc scripts\\Application_InnoSetup.iss"
    - ps: "ls scripts\\built-dist\\*.exe"
    - ps: "ls scripts\\windows_installer\\*.exe"
 
-   - ps: "7z a PySideApp.zip scripts\\built-dist"
+   - ps: "7z a AutoFallOff.zip scripts\\built-dist"
 
 artifacts:
-   - path: PySideApp.zip
+   - path: AutoFallOff.zip
    - path: scripts\windows_installer\*.exe
