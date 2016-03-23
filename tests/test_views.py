@@ -27,3 +27,17 @@ class TestBasicMainWindow:
         assert basic_form.width() >= 1000
         assert basic_form.height() >= 700
 
+    def test_required_controls_are_visible(self, basic_form, qtbot):
+        assert basic_form.ui.labelStatus.text() == "Pre-initialization"
+        assert basic_form.ui.labelPaddleController.text() == "Pre-init"
+        assert basic_form.ui.labelStageController.text() == "Pre-init"
+        assert basic_form.ui.labelCameraController.text() == "Pre-init"
+
+        assert basic_form.ui.labelReferencePaddle.text() == "Pre-init"
+        assert basic_form.ui.labelSourcePaddle.text() == "Pre-init"
+        assert basic_form.ui.labelStagePosition.text() == "Pre-init"
+
+        assert basic_form.ui.buttonInitialize.text() == "Initialize"
+        assert basic_form.ui.buttonStart.text() == "Initialize"
+        assert basic_form.ui.buttonStop.text() == "Initialize"
+
