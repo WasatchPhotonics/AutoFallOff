@@ -6,7 +6,8 @@
 # <project root> $ ./scripts/rebuild_resources.sh
 
 CMD_NAME="pyside-rcc"
-
+UIC_NAME="pyside-uic"
+PRJ_NAME="autofalloff"
 
 if [ "$(expr substr $(uname -s) 1 10)" == "MINGW64_NT" ]; then
     echo "Windows detected"
@@ -18,10 +19,10 @@ echo "Rebuilding resources file"
 # Use the relative package name glob so the build is portable across
 # other projects
 $CMD_NAME \
-    */assets/resources.qrc \
-    -o */assets/resources_rc.py
+    $PRJ_NAME/assets/resources.qrc \
+    -o $PRJ_NAME/assets/resources_rc.py
 
-#echo "Rebuilding uic forms"
-#$UIC_NAME \
-#    pysideapp/assets/placeholder_layout.ui\
-#    -o pysideapp/assets/placeholder_layout.py
+echo "Rebuilding uic forms"
+$UIC_NAME \
+    $PRJ_NAME/assets/basic_layout.ui \
+    -o $PRJ_NAME/assets/basic_layout.py
