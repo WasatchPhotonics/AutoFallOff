@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'autofalloff/assets/basic_layout.ui'
 #
-# Created: Wed Mar 23 09:44:57 2016
+# Created: Wed Mar 23 09:48:43 2016
 #      by: pyside-uic 0.2.15 running on PySide 1.2.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -12,23 +12,23 @@ from PySide import QtCore, QtGui
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1013, 745)
+        MainWindow.resize(1000, 700)
         self.centralwidget = QtGui.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.label = QtGui.QLabel(self.centralwidget)
-        self.label.setGeometry(QtCore.QRect(440, 30, 171, 16))
+        self.label.setGeometry(QtCore.QRect(450, 100, 171, 16))
         self.label.setObjectName("label")
         self.label_2 = QtGui.QLabel(self.centralwidget)
-        self.label_2.setGeometry(QtCore.QRect(440, 50, 171, 16))
+        self.label_2.setGeometry(QtCore.QRect(450, 120, 171, 16))
         self.label_2.setObjectName("label_2")
         self.label_3 = QtGui.QLabel(self.centralwidget)
-        self.label_3.setGeometry(QtCore.QRect(440, 110, 171, 16))
+        self.label_3.setGeometry(QtCore.QRect(450, 180, 171, 16))
         self.label_3.setObjectName("label_3")
         self.label_4 = QtGui.QLabel(self.centralwidget)
-        self.label_4.setGeometry(QtCore.QRect(440, 90, 171, 16))
+        self.label_4.setGeometry(QtCore.QRect(450, 160, 171, 16))
         self.label_4.setObjectName("label_4")
         self.label_5 = QtGui.QLabel(self.centralwidget)
-        self.label_5.setGeometry(QtCore.QRect(440, 150, 171, 16))
+        self.label_5.setGeometry(QtCore.QRect(450, 220, 171, 16))
         self.label_5.setObjectName("label_5")
         self.verticalLayoutWidget = QtGui.QWidget(self.centralwidget)
         self.verticalLayoutWidget.setGeometry(QtCore.QRect(10, 300, 261, 261))
@@ -82,23 +82,26 @@ class Ui_MainWindow(object):
         self.pushButton_2.setGeometry(QtCore.QRect(40, 120, 90, 27))
         self.pushButton_2.setObjectName("pushButton_2")
         self.label_9 = QtGui.QLabel(self.centralwidget)
-        self.label_9.setGeometry(QtCore.QRect(160, 30, 221, 16))
+        self.label_9.setGeometry(QtCore.QRect(170, 100, 221, 16))
         self.label_9.setObjectName("label_9")
         self.label_10 = QtGui.QLabel(self.centralwidget)
-        self.label_10.setGeometry(QtCore.QRect(160, 60, 221, 16))
+        self.label_10.setGeometry(QtCore.QRect(170, 130, 221, 16))
         self.label_10.setObjectName("label_10")
         self.label_11 = QtGui.QLabel(self.centralwidget)
-        self.label_11.setGeometry(QtCore.QRect(160, 90, 221, 16))
+        self.label_11.setGeometry(QtCore.QRect(170, 160, 221, 16))
         self.label_11.setObjectName("label_11")
         self.pushButton_3 = QtGui.QPushButton(self.centralwidget)
         self.pushButton_3.setGeometry(QtCore.QRect(40, 40, 90, 27))
         self.pushButton_3.setObjectName("pushButton_3")
+        self.labelStatus = QtGui.QLabel(self.centralwidget)
+        self.labelStatus.setGeometry(QtCore.QRect(230, 40, 251, 16))
+        self.labelStatus.setObjectName("labelStatus")
         self.label_12 = QtGui.QLabel(self.centralwidget)
-        self.label_12.setGeometry(QtCore.QRect(160, 210, 251, 16))
+        self.label_12.setGeometry(QtCore.QRect(170, 40, 59, 15))
         self.label_12.setObjectName("label_12")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtGui.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 1013, 25))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 1000, 25))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtGui.QStatusBar(MainWindow)
@@ -124,5 +127,6 @@ class Ui_MainWindow(object):
         self.label_10.setText(QtGui.QApplication.translate("MainWindow", "Stage controller status: Not OK", None, QtGui.QApplication.UnicodeUTF8))
         self.label_11.setText(QtGui.QApplication.translate("MainWindow", "Camera controlelr status: Not OK", None, QtGui.QApplication.UnicodeUTF8))
         self.pushButton_3.setText(QtGui.QApplication.translate("MainWindow", "Initialize", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_12.setText(QtGui.QApplication.translate("MainWindow", "Current status: 0.5 ref, src, combined", None, QtGui.QApplication.UnicodeUTF8))
+        self.labelStatus.setText(QtGui.QApplication.translate("MainWindow", "Pre-initialization", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_12.setText(QtGui.QApplication.translate("MainWindow", "Status:", None, QtGui.QApplication.UnicodeUTF8))
 

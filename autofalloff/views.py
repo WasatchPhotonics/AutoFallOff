@@ -10,12 +10,12 @@ log = logging.getLogger(__name__)
 class BasicWindow(QtGui.QMainWindow):
     """ Load the QT designer created layout based on default qt WIMP controls.
     """
-    def __init__(self, title="BasicWindow", layout=strip_layout,
-                 geometry=[250, 250, 900, 400]):
+    def __init__(self, title="BasicWindow", layout=basic_layout,
+                 geometry=[250, 250, 1000, 700]):
         log.debug("Init")
         super(BasicWindow, self).__init__()
 
-        self.ui = basic_layout.Ui_MainWindow()
+        self.ui = layout.Ui_MainWindow()
         self.ui.setupUi(self)
 
         self.create_signals()
