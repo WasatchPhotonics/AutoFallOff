@@ -64,6 +64,8 @@ controller
     events
 
 
+Given a roughly computed step size of 21428.5714, you move the zaber
+stage to home, then  to 0.1*size, then 0.5*size absolute.
 
 
 1,-1873,66,50,Left Click Release
