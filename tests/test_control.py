@@ -7,6 +7,8 @@ controller create the top level logger
 
 import time
 
+import pytest
+
 from PySide import QtTest
 
 from autofalloff import control
@@ -85,3 +87,32 @@ class TestControl:
         time.sleep(1)
         assert "Control level close" in caplog.text()
         applog.explicit_log_close()
+
+    @pytest.fixture(scope="function")
+    def basic_window(self, qtbot, request):
+        """ Setup the controller the same way the scripts/Application
+        does at every test. Ensure that the teardown is in place
+        regardless of test result. 
+        """
+        main_logger = applog.MainLogger()
+
+        app_control = control.Controller(main_logger.log_queue)
+
+        qtbot.addWidget(app_control.form)
+        
+        def control_close():
+            app_control.close()
+            main_logger.close()
+            applog.explicit_log_close()
+
+        request.addfinalizer(control_close)
+
+        return app_control
+
+    def test_controller_sees_deafult_state_on_startup(self, basic_window,
+                                                      qtbot, caplog):
+
+        QtTest.QTest.qWaitForWindowShown(basic_window.form)
+
+
+        qtbot.wait(1000)
