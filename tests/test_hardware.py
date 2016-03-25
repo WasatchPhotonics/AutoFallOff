@@ -36,6 +36,22 @@ class TestRefArmControl:
         result = refarms.hwl_home()
         assert result == "A\r\n"
 
+    def test_qwl_position_home_90_home(self, caplog):
+        refarms = oct_hardware.RefArmControl(REF_ARM_COMPORT)
+
+        move_duration = 2.0
+        result = refarms.qwl_home()
+        assert result == "A\r\n"
+        time.sleep(move_duration)
+
+        result = refarms.qwl_relative(90)
+        assert result == "A\r\n"
+        time.sleep(move_duration)
+
+        result = refarms.qwl_home()
+        assert result == "A\r\n"
+
+
 @pytest.mark.skipif(not pytest.config.getoption("--hardware"),
                     reason="need --hardware option to run")
 class TestZaberDevice:
