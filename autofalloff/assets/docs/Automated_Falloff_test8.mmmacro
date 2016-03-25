@@ -47,7 +47,7 @@ view
     current paddle positions (label open, label closed), change color
     current zaber position - a number that is absolute position
     sapera view, at each time capture:
-        one graph that is all references
+        one graph that is all references - first line profile from 100 line tiff
         one graph that is all sources
         one graph that is both combined
 

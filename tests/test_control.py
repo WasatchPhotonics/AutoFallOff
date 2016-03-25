@@ -1,6 +1,6 @@
 """ Controller tests that show the linkage between the data model, view, and
 logging components.
-Mimic the contents of the scripts/autofalloff.py setup section. Create the logger
+Mimic the contents of the scripts/AutoFallOff.py setup section. Create the logger
 with the queue handler as part of the test case, as opposed to having the
 controller create the top level logger
 """

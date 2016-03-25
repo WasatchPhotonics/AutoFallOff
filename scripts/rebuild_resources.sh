@@ -11,8 +11,13 @@ PRJ_NAME="autofalloff"
 
 if [ "$(expr substr $(uname -s) 1 10)" == "MINGW64_NT" ]; then
     echo "Windows detected"
+    # Pre-2016-03-25 10:16 system configuration
+    #CMD_NAME="C:\Python27\Lib\site-packages\PySide\pyside-rcc.exe"
+    #UIC_NAME="C:\Python27\Lib\site-packages\PySide\pyside-uic.exe"
+
+    # Windows 7 with python xy 2.7.10
     CMD_NAME="C:\Python27\Lib\site-packages\PySide\pyside-rcc.exe"
-    UIC_NAME="C:\Python27\Lib\site-packages\PySide\pyside-uic.exe"
+    # UIC is on the path
 fi
 
 echo "Rebuilding resources file"

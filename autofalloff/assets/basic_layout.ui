@@ -349,6 +349,16 @@
      <cstring></cstring>
     </property>
    </widget>
+   <widget class="QTextEdit" name="textLog">
+    <property name="geometry">
+     <rect>
+      <x>640</x>
+      <y>30</y>
+      <width>321</width>
+      <height>241</height>
+     </rect>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -356,7 +366,7 @@
      <x>0</x>
      <y>0</y>
      <width>1000</width>
-     <height>25</height>
+     <height>18</height>
     </rect>
    </property>
   </widget>
