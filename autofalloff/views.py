@@ -12,7 +12,7 @@ class BasicWindow(QtGui.QMainWindow):
     """
     def __init__(self, title="BasicWindow", layout=basic_layout,
                  geometry=[250, 250, 1000, 700]):
-        log.debug("Init")
+        log.debug("Init of %s", self.__class__.__name__)
         super(BasicWindow, self).__init__()
 
         self.ui = layout.Ui_MainWindow()

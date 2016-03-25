@@ -54,8 +54,8 @@ class Controller(object):
         result = self.device.read()
         if result is not None:
             self.total_spectra += 1
-            self.form.txt_box.append("%s spectra read" \
-                                     % self.total_spectra)
+            self.form.ui.textLog.append("%s spectra read" \
+                                        % self.total_spectra)
 
         if self.continue_loop:
             self.main_timer.start(0)
