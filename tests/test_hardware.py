@@ -6,8 +6,35 @@ devices.
 import time
 import pytest
 
-from autofalloff import zaber_control
+from autofalloff import zaber_control, oct_hardware
+
 COM_PORT = "COM4"
+REF_ARM_COMPORT = "COM3"
+
+
+@pytest.mark.skipif(not pytest.config.getoption("--hardware"),
+                    reason="need --hardware option to run")
+class TestRefArmControl:
+    def test_refarmcontrol_device_get_status(self, caplog):
+        refarm = oct_hardware.RefArmControl(REF_ARM_COMPORT)
+        status = refarm.get_version()
+        assert status != None
+        assert status == "Ver:1.5I\r\nA"
+
+    def test_hwl_position_home_90_home(self, caplog):
+        refarms = oct_hardware.RefArmControl(REF_ARM_COMPORT)
+
+        move_duration = 2.0
+        result = refarms.hwl_home()
+        assert result == "A\r\n"
+        time.sleep(move_duration)
+
+        result = refarms.hwl_relative(90)
+        assert result == "A\r\n"
+        time.sleep(move_duration)
+
+        result = refarms.hwl_home()
+        assert result == "A\r\n"
 
 @pytest.mark.skipif(not pytest.config.getoption("--hardware"),
                     reason="need --hardware option to run")
