@@ -64,6 +64,7 @@ class TestZaberDevice:
     def test_zaber_device_can_home(self, caplog):
         motor = zaber_control.ZaberControl(COM_PORT)
         motor.homeMotor()
+        time.sleep(4)
 
 
     def test_position_cycle(self, caplog):
