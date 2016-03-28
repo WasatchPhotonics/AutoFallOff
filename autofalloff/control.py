@@ -38,6 +38,28 @@ class Controller(object):
         """
         self.form.exit_signal.exit.connect(self.close)
 
+        self.form.ui.buttonInitialize.clicked.connect(self.initialize)
+        self.form.ui.buttonStart.clicked.connect(self.start)
+        self.form.ui.buttonStop.clicked.connect(self.stop)
+
+    def initialize(self):
+        """ Trigger hardware initialization procedures.
+        """
+        log.info("Initialize flow")
+        self.form.ui.labelStatus.setText("Initializing")
+
+    def start(self):
+        """ Start the scan procedure.
+        """
+        log.info("Starting")
+        self.form.ui.labelStatus.setText("Starting")
+
+    def stop(self):
+        """ Stop the scan procedure.
+        """
+        log.info("Stopping")
+        self.form.ui.labelStatus.setText("Stopping")
+
     def setup_main_event_loop(self):
         """ Create a timer for a continuous event loop, trigger the start.
         """
@@ -46,7 +68,7 @@ class Controller(object):
         self.main_timer = QtCore.QTimer()
         self.main_timer.setSingleShot(True)
         self.main_timer.timeout.connect(self.event_loop)
-        self.main_timer.start(0)
+        #self.main_timer.start(0)
 
     def event_loop(self):
         """ Process queue events, interface events, then update views.

@@ -38,6 +38,6 @@ class TestBasicMainWindow:
         assert basic_form.ui.labelStagePosition.text() == "Pre-init"
 
         assert basic_form.ui.buttonInitialize.text() == "Initialize"
-        assert basic_form.ui.buttonStart.text() == "Initialize"
-        assert basic_form.ui.buttonStop.text() == "Initialize"
+        assert basic_form.ui.buttonStart.text() == "Start"
+        assert basic_form.ui.buttonStop.text() == "Stop"
 

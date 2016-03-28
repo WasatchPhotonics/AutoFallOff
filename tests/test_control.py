@@ -9,7 +9,7 @@ import time
 
 import pytest
 
-from PySide import QtTest
+from PySide import QtTest, QtCore
 
 from autofalloff import control
 from autofalloff import applog
@@ -89,17 +89,18 @@ class TestControl:
         applog.explicit_log_close()
 
     @pytest.fixture(scope="function")
-    def basic_window(self, qtbot, request):
+    def basic_window(self, qtbot, request, hardware=None):
         """ Setup the controller the same way the scripts/Application
         does at every test. Ensure that the teardown is in place
-        regardless of test result. 
+        regardless of test result.
         """
         main_logger = applog.MainLogger()
 
-        app_control = control.Controller(main_logger.log_queue)
+        app_control = control.Controller(main_logger.log_queue,
+                                         hardware=hardware)
 
         qtbot.addWidget(app_control.form)
-        
+
         def control_close():
             app_control.close()
             main_logger.close()
@@ -109,10 +110,62 @@ class TestControl:
 
         return app_control
 
+    @pytest.fixture(scope="function")
+    def basic_window(self, qtbot, request):
+        """ Setup the controller the same way the scripts/Application
+        does at every test. Ensure that the teardown is in place
+        regardless of test result.
+        """
+        main_logger = applog.MainLogger()
+
+        app_control = control.Controller(main_logger.log_queue)
+
+        qtbot.addWidget(app_control.form)
+
+        def control_close():
+            app_control.close()
+            main_logger.close()
+            applog.explicit_log_close()
+
+        request.addfinalizer(control_close)
+
+        return app_control
+
+    @pytest.fixture(scope="function")
+    def control_window(self, qtbot, request):
+        """ Like basic window above, but specify the controlling code to
+        simulate actual delays and processing results.  """
+        return self.basic_window(qtbot, request)
+
+
     def test_controller_sees_deafult_state_on_startup(self, basic_window,
                                                       qtbot, caplog):
 
         QtTest.QTest.qWaitForWindowShown(basic_window.form)
-
+        assert basic_window.form.ui.labelStatus.text() == "Pre-initialization"
 
         qtbot.wait(1000)
+
+    def test_controller_initialize_button_emits_signal(self, basic_window, qtbot,
+                                                       caplog):
+        """ Rapid iteration of signals and interface linkages tests.
+        """
+        qtbot.mouseClick(basic_window.form.ui.buttonInitialize, QtCore.Qt.LeftButton)
+        assert "Initialize flow" in caplog.text()
+        assert basic_window.form.ui.labelStatus.text() == "Initializing"
+
+        qtbot.mouseClick(basic_window.form.ui.buttonStart, QtCore.Qt.LeftButton)
+        assert "Starting" in caplog.text()
+        assert basic_window.form.ui.labelStatus.text() == "Starting"
+
+        qtbot.mouseClick(basic_window.form.ui.buttonStop, QtCore.Qt.LeftButton)
+        assert "Stopping" in caplog.text()
+        assert basic_window.form.ui.labelStatus.text() == "Stopping"
+
+    def test_controller_simulated_logic_flow(self, control_window, qtbot, caplog):
+        """ More accurate timing to reflect the actual hardware control.
+        """
+
+        qtbot.mouseClick(control_window.form.ui.buttonInitialize,
+                         QtCore.Qt.LeftButton)
+
