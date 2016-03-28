@@ -169,3 +169,11 @@ class TestControl:
         qtbot.mouseClick(control_window.form.ui.buttonInitialize,
                          QtCore.Qt.LeftButton)
 
+        assert "Initialize flow" in caplog.text()
+        assert control_window.form.ui.labelStatus.text() == "Initializing"
+
+        qtbot.wait(3000)
+        assert control_window.form.ui.labelStatus.text() == "Initialized OK"
+
+
+

@@ -8,21 +8,21 @@ import pytest
 
 from autofalloff import zaber_control, oct_hardware
 
-COM_PORT = "COM4"
-REF_ARM_COMPORT = "COM3"
+ZABERS_COM_PORT = "COM4"
+REFARM_COM_PORT = "COM3"
 
 
 @pytest.mark.skipif(not pytest.config.getoption("--hardware"),
                     reason="need --hardware option to run")
 class TestRefArmControl:
     def test_refarmcontrol_device_get_status(self, caplog):
-        refarm = oct_hardware.RefArmControl(REF_ARM_COMPORT)
+        refarm = oct_hardware.RefArmControl(REFARM_COM_PORT)
         status = refarm.get_version()
         assert status != None
         assert status == "Ver:1.5I\r\nA"
 
     def test_hwl_position_home_90_home(self, caplog):
-        refarms = oct_hardware.RefArmControl(REF_ARM_COMPORT)
+        refarms = oct_hardware.RefArmControl(REFARM_COM_PORT)
 
         move_duration = 2.0
         result = refarms.hwl_home()
@@ -37,7 +37,7 @@ class TestRefArmControl:
         assert result == "A\r\n"
 
     def test_qwl_position_home_90_home(self, caplog):
-        refarms = oct_hardware.RefArmControl(REF_ARM_COMPORT)
+        refarms = oct_hardware.RefArmControl(REFARM_COM_PORT)
 
         move_duration = 2.0
         result = refarms.qwl_home()
@@ -56,13 +56,13 @@ class TestRefArmControl:
                     reason="need --hardware option to run")
 class TestZaberDevice:
     def test_zaber_device_get_status(self, caplog):
-        motor = zaber_control.ZaberControl(COM_PORT)
+        motor = zaber_control.ZaberControl(ZABERS_COM_PORT)
         status = motor.getStatus()
 
         assert status != None
 
     def test_zaber_device_can_home(self, caplog):
-        motor = zaber_control.ZaberControl(COM_PORT)
+        motor = zaber_control.ZaberControl(ZABERS_COM_PORT)
         motor.homeMotor()
         time.sleep(4)
 
@@ -73,7 +73,7 @@ class TestZaberDevice:
         step_size = 21428.5714
 
         stop_interval = 0.3
-        motor = zaber_control.ZaberControl(COM_PORT)
+        motor = zaber_control.ZaberControl(ZABERS_COM_PORT)
         motor.homeMotor()
         time.sleep(3)
 

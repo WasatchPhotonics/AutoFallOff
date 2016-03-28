@@ -5,9 +5,13 @@ and UI updates with MVC style architecture.
 from PySide import QtCore
 
 from . import views, devices
+from . import zaber_control, oct_hardware
 
 import logging
 log = logging.getLogger(__name__)
+
+REFARM_COMPORT = "COM3"
+ZABERS_COMPORT = "COM4"
 
 class Controller(object):
     def __init__(self, log_queue):
@@ -47,6 +51,32 @@ class Controller(object):
         """
         log.info("Initialize flow")
         self.form.ui.labelStatus.setText("Initializing")
+
+        self.com_timer = QtCore.QTimer()
+        self.com_timer.setSingleShot(True)
+        self.com_timer.timeout.connect(self.connect_com_port)
+        self.com_timer.start(100)
+        log.debug("Post initialize")
+
+    def connect_com_port(self):
+        """ Attempt communication with the reference arm and zaber com port,
+        report the status in the logging area.  """
+        log.debug("1 Post initialize")
+        self.refarm = oct_hardware.RefArmControl(REFARM_COMPORT)
+        status = self.refarm.get_version()
+
+        log.info("Reference arm version: %s", status)
+        if status == "Ver:1.5I\r\nA":
+            log.info("Reference arm version: %s", status)
+
+        self.zaber = zaber_control.ZaberControl(ZABERS_COM_PORT)
+        zstatus = self.zaber.getStatus()
+
+        log.info("Zaber status: %s", zstatus)
+        if status == "test":
+            self.form.ui.labelStatus.setText("Initialized OK")
+
+
 
     def start(self):
         """ Start the scan procedure.

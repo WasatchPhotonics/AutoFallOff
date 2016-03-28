@@ -19,7 +19,7 @@ class ZaberControl(object):
     def __init__(self, port):
         self.port = port
         self.device = None
-        
+
         self.errorDict = {1: ['Cannot home', 'Home - Device has traveled a long distance without triggering the home sensor. Device may be stalling or slipping.'],
                      2: ['Device number invalid', 'Renumbering data out of range.'],
                      14: ['Voltage low', 'Power supply data too low.'],
@@ -57,7 +57,7 @@ class ZaberControl(object):
                      4012: ['Home switch invalid', 'Set Device Mode - this device has integrated home sensor with preset polarity; mode bit 12 cannot be changed by the user.'],
                      4013: ['Bit 13 invalid', 'Set Device Mode - bit 13 is reserved and must be 0.']
                      }
-        
+
     def connect(self, port = None):
         if port != None:
             self.port = port
@@ -68,8 +68,8 @@ class ZaberControl(object):
         except Exception, e:
             self.device =  None
             raise e
-        
-    
+
+
     def close(self):
         if self.device != None:
             try:
@@ -78,12 +78,12 @@ class ZaberControl(object):
             except Exception, e:
                 self.device = None
                 raise e
-        
-    
+
+
     def sendCommand(self, cmd):
         if self.device == None:
             self.connect()
-        
+
         try:
             self.device.write(cmd.cmd)
         except serial.SerialException, e:
@@ -91,7 +91,7 @@ class ZaberControl(object):
             self.device = None
         except Exception, e:
             print e
-    
+
     def receiveData(self):
         try:
             reply = self.device.read(6)
@@ -110,20 +110,20 @@ class ZaberControl(object):
         else:
             repCmd = None
         return repCmd
-            
+
     def sendReceive(self, cmd):
         self.sendCommand(cmd)
         return self.receiveData()
-            
+
 #### Command list:
     def resetMotor(self, motor = 0):
         cmd = MotorCommand(0, 0, motor)
         self.sendReceive(cmd)
-        
+
     def homeMotor(self, motor = 0):
         cmd = MotorCommand(1, 0, motor)
         self.sendReceive(cmd)
-        
+
     def getDeviceId(self, motor = 0):
         cmd = MotorCommand(50, 0, motor)
         devId = self.sendReceive(cmd)
@@ -133,7 +133,7 @@ class ZaberControl(object):
         cmd = MotorCommand(51, 0, motor)
         fw = self.sendReceive(cmd)
         return fw.data
-    
+
     def getPosition(self, motor = 0):
         cmd = MotorCommand(60, 0, motor)
         pos = self.sendReceive(cmd)
@@ -141,7 +141,7 @@ class ZaberControl(object):
             return None
         else:
             return pos.data
-    
+
     def setPositionAbsolute(self, pos, motor = 0):
         cmd = MotorCommand(20, int(pos), motor)
         pos = self.sendReceive(cmd)
@@ -149,7 +149,7 @@ class ZaberControl(object):
             return None
         else:
             return pos.data
-    
+
     def setPositionRelative(self, relPos, motor = 0):
         cmd = MotorCommand(21, int(relPos), motor)
         pos = self.sendReceive(cmd)
@@ -157,7 +157,7 @@ class ZaberControl(object):
             return None
         else:
             return pos.data
-        
+
     def setTargetSpeed(self, speed, motor = 0):
         cmd = MotorCommand(42, int(speed), motor)
         out = self.sendReceive(cmd)
@@ -165,7 +165,7 @@ class ZaberControl(object):
             return None
         else:
             return out.data
-    
+
     def getTargetSpeed(self, motor = 0):
         cmd = MotorCommand(53, 42, motor)
         out = self.sendReceive(cmd)
@@ -173,7 +173,7 @@ class ZaberControl(object):
             return None
         else:
             return out.data
-        
+
     def setAcceleration(self, data, motor = 0):
         cmd = MotorCommand(43, int(data), motor)
         out = self.sendReceive(cmd)
@@ -181,7 +181,7 @@ class ZaberControl(object):
             return None
         else:
             return out.data
-    
+
     def getAcceleration(self, motor = 0):
         cmd = MotorCommand(53, 43, motor)
         out = self.sendReceive(cmd)
@@ -189,7 +189,7 @@ class ZaberControl(object):
             return None
         else:
             return out.data
-        
+
     def setCurrentPosition(self, data, motor = 0):
         cmd = MotorCommand(45, int(data), motor)
         out = self.sendReceive(cmd)
@@ -197,7 +197,7 @@ class ZaberControl(object):
             return None
         else:
             return out.data
-    
+
     def setMicrostepResolution(self, data, motor = 0):
         cmd = MotorCommand(37, int(data), motor)
         out = self.sendReceive(cmd)
@@ -205,7 +205,7 @@ class ZaberControl(object):
             return None
         else:
             return out.data
-    
+
     def getMicrostepResolution(self, motor = 0):
         cmd = MotorCommand(53, 37, motor)
         out = self.sendReceive(cmd)
@@ -213,7 +213,7 @@ class ZaberControl(object):
             return None
         else:
             return out.data
-        
+
     def stop(self, motor = 0):
         ''' Stops motor and returns final postition
         '''
@@ -223,7 +223,7 @@ class ZaberControl(object):
             return None
         else:
             return out.data
-    
+
     def setRunningCurrent(self, data, motor = 0):
         if data > 10.0/127:
             d = int(10.0/data)
@@ -246,7 +246,7 @@ class ZaberControl(object):
         out = self.sendReceive(cmd)
         print "current set"
         print out.data
-    
+
     def getRunningCurrent(self, motor = 0):
         cmd = MotorCommand(53, 38, motor)
         out = self.sendReceive(cmd)
@@ -257,7 +257,7 @@ class ZaberControl(object):
                 return 0
             else:
                 return 10.0/out.data
-        
+
     def setHoldCurrent(self, data, motor = 0):
         if data > 10.0/127:
             d = int(10.0/data)
@@ -272,7 +272,7 @@ class ZaberControl(object):
                 return 0
             else:
                 return 10.0/out.data
-    
+
     def getHoldCurrent(self, motor = 0):
         cmd = MotorCommand(53, 39, motor)
         out = self.sendReceive(cmd)
@@ -283,7 +283,7 @@ class ZaberControl(object):
                 return 0
             else:
                 return 10.0/out.data
-        
+
     def getStatus(self, motor = 0):
         cmd = MotorCommand(54, 0, motor)
         out = self.sendReceive(cmd)
@@ -314,7 +314,7 @@ if __name__ == '__main__':
     m = ZaberControl('com4')
     m.homeMotor()
     time.sleep(1)
-    m.setPositionAbsolute(700000)
+    m.setPositionAbsolute(700000) # microsteps
 
     #m.setPositionAbsolute(1e5)
     #stat = m.getStatus()
