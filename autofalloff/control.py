@@ -5,7 +5,7 @@ and UI updates with MVC style architecture.
 from PySide import QtCore
 
 from . import views, devices
-from . import zaber_control, oct_hardware
+from . import zaber_control, oct_hardware, simulated
 
 import logging
 log = logging.getLogger(__name__)
@@ -14,20 +14,29 @@ REFARM_COMPORT = "COM3"
 ZABERS_COMPORT = "COM4"
 
 class Controller(object):
-    def __init__(self, log_queue):
+    def __init__(self, log_queue, hardware="real"):
         log.debug("Control startup")
 
-        # Create a separate process for the qt gui event loop
+        self.hardware = hardware
+
         self.form = views.BasicWindow()
 
         self.create_signals()
-
         self.bind_view_signals()
 
-        self.device = devices.LongPollingSimulateSpectra(log_queue)
-        self.total_spectra = 0
-
         self.setup_main_event_loop()
+
+        self.setup_hardware(self.hardware)
+
+    def setup_hardware(self, hardware):
+        """ Create connections to physical or simulated hardware devices.
+        """
+        if hardware == "real":
+            self.refarm = oct_hardware.RefArmControl(REFARM_COMPORT)
+            self.zaber = zaber_control.ZaberControl(ZABERS_COMPORT)
+        else:
+            self.refarm = simulated.RefArmControl(REFARM_COMPORT)
+            self.zaber = simulated.ZaberControl(ZABERS_COMPORT)
 
     def create_signals(self):
         """ Create signals for access by parent process.
@@ -54,27 +63,25 @@ class Controller(object):
 
         self.com_timer = QtCore.QTimer()
         self.com_timer.setSingleShot(True)
-        self.com_timer.timeout.connect(self.connect_com_port)
+        self.com_timer.timeout.connect(self.connect_COMPORT)
         self.com_timer.start(100)
         log.debug("Post initialize")
 
-    def connect_com_port(self):
+    def connect_COMPORT(self):
         """ Attempt communication with the reference arm and zaber com port,
         report the status in the logging area.  """
-        log.debug("1 Post initialize")
-        self.refarm = oct_hardware.RefArmControl(REFARM_COMPORT)
+
         status = self.refarm.get_version()
-
         log.info("Reference arm version: %s", status)
-        if status == "Ver:1.5I\r\nA":
-            log.info("Reference arm version: %s", status)
 
-        self.zaber = zaber_control.ZaberControl(ZABERS_COM_PORT)
         zstatus = self.zaber.getStatus()
-
         log.info("Zaber status: %s", zstatus)
-        if status == "test":
+
+        if zstatus == "idle" and status == "Ver:1.5I\r\nA":
             self.form.ui.labelStatus.setText("Initialized OK")
+        else:
+            log.warning("Cannot initialize")
+            self.form.ui.labelStatus.setText("Failed")
 
 
 
@@ -114,7 +121,6 @@ class Controller(object):
 
     def close(self):
         self.continue_loop = False
-        self.device.close()
         log.debug("Control level close")
         self.control_exit_signal.exit.emit("Control level close")
 

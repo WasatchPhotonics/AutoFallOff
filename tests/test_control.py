@@ -111,14 +111,15 @@ class TestControl:
         return app_control
 
     @pytest.fixture(scope="function")
-    def basic_window(self, qtbot, request):
+    def basic_window(self, qtbot, request, hardware="real"):
         """ Setup the controller the same way the scripts/Application
         does at every test. Ensure that the teardown is in place
         regardless of test result.
         """
         main_logger = applog.MainLogger()
 
-        app_control = control.Controller(main_logger.log_queue)
+        app_control = control.Controller(main_logger.log_queue,
+                                         hardware=hardware)
 
         qtbot.addWidget(app_control.form)
 
@@ -135,7 +136,7 @@ class TestControl:
     def control_window(self, qtbot, request):
         """ Like basic window above, but specify the controlling code to
         simulate actual delays and processing results.  """
-        return self.basic_window(qtbot, request)
+        return self.basic_window(qtbot, request, hardware="simulated")
 
 
     def test_controller_sees_deafult_state_on_startup(self, basic_window,
