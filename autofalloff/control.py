@@ -46,6 +46,12 @@ class Controller(object):
 
         self.control_exit_signal = ControlClose()
 
+        class ControlSignals(QtCore.QObject):
+            initialize = QtCore.Signal(str)
+            source_paddle_move = QtCore.Signal(str)
+
+        self.control_signals = ControlSignals()
+
     def bind_view_signals(self):
         """ Connect GUI form signals to control events.
         """
@@ -55,11 +61,23 @@ class Controller(object):
         self.form.ui.buttonStart.clicked.connect(self.start)
         self.form.ui.buttonStop.clicked.connect(self.stop)
 
+        self.control_signals.source_paddle_move.connect(self.move_source_paddle)
+
+    def move_source_paddle(self, position):
+        """ Update the visualization interface to show the current source paddle
+        position.
+        """
+        log.info("Move source paddle to: %s", position)
+        self.form.ui.labelSourcePaddle.setText(position)
+
+
     def initialize(self):
         """ Trigger hardware initialization procedures.
         """
         log.info("Initialize flow")
         self.form.ui.labelStatus.setText("Initializing")
+
+        self.control_signals.initialize.emit("Initializing")
 
         self.com_timer = QtCore.QTimer()
         self.com_timer.setSingleShot(True)
@@ -79,6 +97,8 @@ class Controller(object):
 
         if zstatus == "idle" and status == "Ver:1.5I\r\nA":
             self.form.ui.labelStatus.setText("Initialized OK")
+
+            self.control_signals.source_paddle_move.emit("Home")
         else:
             log.warning("Cannot initialize")
             self.form.ui.labelStatus.setText("Failed")

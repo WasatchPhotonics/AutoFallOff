@@ -178,3 +178,21 @@ class TestControl:
 
 
 
+
+    def test_click_initialize_emits_signal(self, control_window, caplog, qtbot):
+
+        signal = control_window.control_signals.initialize
+        with qtbot.wait_signal(signal, timeout=1000, raising=True):
+            qtbot.mouseClick(control_window.form.ui.buttonInitialize,
+                             QtCore.Qt.LeftButton)
+
+    def test_click_initialize_updates_paddle_status(self, control_window, caplog, qtbot):
+        signal = control_window.control_signals.source_paddle_move
+        with qtbot.wait_signal(signal, timeout=1000, raising=True):
+            qtbot.mouseClick(control_window.form.ui.buttonInitialize,
+                             QtCore.Qt.LeftButton)
+
+        qtbot.wait(3000) # Give the simulation time
+
+        assert control_window.form.ui.labelSourcePaddle.text() == "Home"
+
