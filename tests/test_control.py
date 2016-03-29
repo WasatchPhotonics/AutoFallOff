@@ -191,6 +191,9 @@ class TestControl:
         signals = [cwcs.source_paddle_move,
                    cwcs.reference_paddle_move,
                    cwcs.stage_move,
+                   cwcs.paddle_controller,
+                   cwcs.camera_controller,
+                   cwcs.stage_controller,
                   ]
 
         # You'd think you could do wait_signals, alas it reports a typerror when
@@ -206,6 +209,7 @@ class TestControl:
             print "Wait for item: ", item
             item.wait()
 
+        qtbot.wait(2000) # Give the simulation time
 
     def test_click_initialize_updates_paddle_status(self, control_window, caplog, qtbot):
         signal = control_window.control_signals.source_paddle_move

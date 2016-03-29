@@ -52,6 +52,10 @@ class Controller(object):
             reference_paddle_move = QtCore.Signal(str)
             stage_move = QtCore.Signal(str)
 
+            paddle_controller = QtCore.Signal(str)
+            camera_controller = QtCore.Signal(str)
+            stage_controller = QtCore.Signal(str)
+
         self.control_signals = ControlSignals()
 
     def bind_view_signals(self):
@@ -63,9 +67,34 @@ class Controller(object):
         self.form.ui.buttonStart.clicked.connect(self.start)
         self.form.ui.buttonStop.clicked.connect(self.stop)
 
+        self.control_signals.paddle_controller.connect(self.paddle_control_update)
+        self.control_signals.stage_controller.connect(self.stage_control_update)
+        self.control_signals.camera_controller.connect(self.camera_control_update)
+
         self.control_signals.source_paddle_move.connect(self.move_source_paddle)
         self.control_signals.reference_paddle_move.connect(self.move_reference_paddle)
         self.control_signals.stage_move.connect(self.move_stage)
+
+    def paddle_control_update(self, status):
+        """ Update the paddle visualization interface to show current controller
+        status.
+        """
+        log.info("paddle control update: %s", status)
+        self.form.ui.labelPaddleController.setText(status)
+
+    def stage_control_update(self, status):
+        """ Update the stage visualization interface to show current controller
+        status.
+        """
+        log.info("stage control update: %s", status)
+        self.form.ui.labelStageController.setText(status)
+
+    def camera_control_update(self, status):
+        """ Update the camera visualization interface to show current controller
+        status.
+        """
+        log.info("camera control update: %s", status)
+        self.form.ui.labelCameraController.setText(status)
 
     def move_source_paddle(self, position):
         """ Update the visualization interface to show the current source paddle
@@ -119,6 +148,11 @@ class Controller(object):
             self.control_signals.source_paddle_move.emit("Home")
             self.control_signals.reference_paddle_move.emit("Home")
             self.control_signals.stage_move.emit("Home")
+
+            self.control_signals.paddle_controller.emit("Ready")
+            self.control_signals.stage_controller.emit("Ready")
+            self.control_signals.camera_controller.emit("Ready")
+
         else:
             log.warning("Cannot initialize")
             self.form.ui.labelStatus.setText("Failed")
