@@ -49,6 +49,8 @@ class Controller(object):
         class ControlSignals(QtCore.QObject):
             initialize = QtCore.Signal(str)
             source_paddle_move = QtCore.Signal(str)
+            reference_paddle_move = QtCore.Signal(str)
+            stage_move = QtCore.Signal(str)
 
         self.control_signals = ControlSignals()
 
@@ -62,6 +64,8 @@ class Controller(object):
         self.form.ui.buttonStop.clicked.connect(self.stop)
 
         self.control_signals.source_paddle_move.connect(self.move_source_paddle)
+        self.control_signals.reference_paddle_move.connect(self.move_reference_paddle)
+        self.control_signals.stage_move.connect(self.move_stage)
 
     def move_source_paddle(self, position):
         """ Update the visualization interface to show the current source paddle
@@ -69,6 +73,20 @@ class Controller(object):
         """
         log.info("Move source paddle to: %s", position)
         self.form.ui.labelSourcePaddle.setText(position)
+
+    def move_reference_paddle(self, position):
+        """ Update the visualization interface to show the current reference paddle
+        position.
+        """
+        log.info("Move reference paddle to: %s", position)
+        self.form.ui.labelReferencePaddle.setText(position)
+
+    def move_stage(self, position):
+        """ Update the visualization interface to show the current zaber
+        stage position.
+        """
+        log.info("Move stage to: %s", position)
+        self.form.ui.labelStagePosition.setText(position)
 
 
     def initialize(self):
@@ -99,6 +117,8 @@ class Controller(object):
             self.form.ui.labelStatus.setText("Initialized OK")
 
             self.control_signals.source_paddle_move.emit("Home")
+            self.control_signals.reference_paddle_move.emit("Home")
+            self.control_signals.stage_move.emit("Home")
         else:
             log.warning("Cannot initialize")
             self.form.ui.labelStatus.setText("Failed")

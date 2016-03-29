@@ -186,13 +186,40 @@ class TestControl:
             qtbot.mouseClick(control_window.form.ui.buttonInitialize,
                              QtCore.Qt.LeftButton)
 
+    def test_click_initialize_triggers_all_signals(self, control_window, qtbot):
+        cwcs = control_window.control_signals
+        signals = [cwcs.source_paddle_move,
+                   cwcs.reference_paddle_move,
+                   cwcs.stage_move,
+                  ]
+
+        # You'd think you could do wait_signals, alas it reports a typerror when
+        # emitting signals. You can wait for each individually though
+        blockers = []
+        for item in signals:
+            blockers.append(qtbot.waitSignal(item, timeout=1000, raising=True))
+
+        qtbot.mouseClick(control_window.form.ui.buttonInitialize,
+                         QtCore.Qt.LeftButton)
+
+        for item in blockers:
+            print "Wait for item: ", item
+            item.wait()
+
+
     def test_click_initialize_updates_paddle_status(self, control_window, caplog, qtbot):
         signal = control_window.control_signals.source_paddle_move
         with qtbot.wait_signal(signal, timeout=1000, raising=True):
             qtbot.mouseClick(control_window.form.ui.buttonInitialize,
                              QtCore.Qt.LeftButton)
 
-        qtbot.wait(3000) # Give the simulation time
+        qtbot.wait(2000) # Give the simulation time
 
         assert control_window.form.ui.labelSourcePaddle.text() == "Home"
+        assert control_window.form.ui.labelReferencePaddle.text() == "Home"
+        assert control_window.form.ui.labelStagePosition.text() == "Home"
+
+        assert control_window.form.ui.labelPaddleController.text() == "Ready"
+        assert control_window.form.ui.labelStageController.text() == "Ready"
+        assert control_window.form.ui.labelCameraController.text() == "Ready"
 
