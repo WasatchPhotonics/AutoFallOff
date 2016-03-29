@@ -223,7 +223,22 @@ class TestControl:
         assert control_window.form.ui.labelReferencePaddle.text() == "Home"
         assert control_window.form.ui.labelStagePosition.text() == "Home"
 
+    def test_click_initialize_updates_controller_status(self, control_window, qtbot):
+        signal = control_window.control_signals.source_paddle_move
+        with qtbot.wait_signal(signal, timeout=1000, raising=True):
+            qtbot.mouseClick(control_window.form.ui.buttonInitialize,
+                             QtCore.Qt.LeftButton)
+
+        qtbot.wait(2000) # Give the simulation time
+
         assert control_window.form.ui.labelPaddleController.text() == "Ready"
         assert control_window.form.ui.labelStageController.text() == "Ready"
         assert control_window.form.ui.labelCameraController.text() == "Ready"
+
+    def test_click_start_emits_signal(self, control_window, qtbot):
+
+        signal = control_window.control_signals.start
+        with qtbot.wait_signal(signal, timeout=1000, raising=True):
+            qtbot.mouseClick(control_window.form.ui.buttonStart,
+                             QtCore.Qt.LeftButton)
 

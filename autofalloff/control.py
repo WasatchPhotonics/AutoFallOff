@@ -56,6 +56,9 @@ class Controller(object):
             camera_controller = QtCore.Signal(str)
             stage_controller = QtCore.Signal(str)
 
+            start = QtCore.Signal(str)
+            stop = QtCore.Signal(str)
+
         self.control_signals = ControlSignals()
 
     def bind_view_signals(self):
@@ -151,7 +154,7 @@ class Controller(object):
 
             self.control_signals.paddle_controller.emit("Ready")
             self.control_signals.stage_controller.emit("Ready")
-            self.control_signals.camera_controller.emit("Ready")
+            self.control_signals.camert_controller.emit("Ready")
 
         else:
             log.warning("Cannot initialize")
@@ -164,12 +167,14 @@ class Controller(object):
         """
         log.info("Starting")
         self.form.ui.labelStatus.setText("Starting")
+        self.control_signals.start.emit("Starting")
 
     def stop(self):
         """ Stop the scan procedure.
         """
         log.info("Stopping")
         self.form.ui.labelStatus.setText("Stopping")
+        self.control_signals.stop.emit("Stopping")
 
     def setup_main_event_loop(self):
         """ Create a timer for a continuous event loop, trigger the start.
