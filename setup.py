@@ -11,6 +11,7 @@ requires = [
     "pytest-qt",
     "pytest-capturelog",
     "pyside",
+    "pyserial",
     ]
 
 setup(name="autofalloff",

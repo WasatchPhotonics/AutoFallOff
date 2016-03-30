@@ -38,6 +38,7 @@ install:
   - "pip install pytest"
   - "pip install pytest-qt"
   - "pip install pytest-capturelog"
+  - "pip install pyserial"
 
   - choco install -y InnoSetup
   - set PATH="C:\Program Files (x86)\Inno Setup 5";%PATH%
