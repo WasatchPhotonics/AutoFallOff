@@ -46,29 +46,6 @@ class TestControl:
         assert "Init of BasicWindow" in caplog.text()
         applog.explicit_log_close()
 
-    def test_device_logs_in_file_only(self, caplog, qtbot):
-        """ Shows the expected behavior. Demonstrates that the capturelog
-        fixture on py.test does not see sub process entries.
-        """
-        assert applog.delete_log_file_if_exists() == True
-
-        main_logger = applog.MainLogger()
-
-        app_control = control.Controller(main_logger.log_queue)
-        qtbot.wait(1000)
-
-        app_control.close()
-        time.sleep(1)
-
-        main_logger.close()
-        time.sleep(1)
-
-        log_text = applog.get_text_from_log()
-        assert "SimulateSpectra setup" in log_text
-        assert "SimulateSpectra setup" not in caplog.text()
-        applog.explicit_log_close()
-
-
     def test_close_view_emits_control_signal(self, caplog, qtbot):
         """ Control script emits an event on a close condition to be processsed
         by the parent qt application, in this case qtbot. In the scripts file,
@@ -90,28 +67,6 @@ class TestControl:
 
     @pytest.fixture(scope="function")
     def basic_window(self, qtbot, request, hardware=None):
-        """ Setup the controller the same way the scripts/Application
-        does at every test. Ensure that the teardown is in place
-        regardless of test result.
-        """
-        main_logger = applog.MainLogger()
-
-        app_control = control.Controller(main_logger.log_queue,
-                                         hardware=hardware)
-
-        qtbot.addWidget(app_control.form)
-
-        def control_close():
-            app_control.close()
-            main_logger.close()
-            applog.explicit_log_close()
-
-        request.addfinalizer(control_close)
-
-        return app_control
-
-    @pytest.fixture(scope="function")
-    def basic_window(self, qtbot, request, hardware="real"):
         """ Setup the controller the same way the scripts/Application
         does at every test. Ensure that the teardown is in place
         regardless of test result.
@@ -162,22 +117,7 @@ class TestControl:
         qtbot.mouseClick(basic_window.form.ui.buttonStop, QtCore.Qt.LeftButton)
         assert "Stopping" in caplog.text()
         assert basic_window.form.ui.labelStatus.text() == "Stopping"
-
-    def test_controller_simulated_logic_flow(self, control_window, qtbot, caplog):
-        """ More accurate timing to reflect the actual hardware control.
-        """
-
-        qtbot.mouseClick(control_window.form.ui.buttonInitialize,
-                         QtCore.Qt.LeftButton)
-
-        assert "Initialize flow" in caplog.text()
-        assert control_window.form.ui.labelStatus.text() == "Initializing"
-
         qtbot.wait(3000)
-        assert control_window.form.ui.labelStatus.text() == "Initialized OK"
-
-
-
 
     def test_click_initialize_emits_signal(self, control_window, caplog, qtbot):
 
@@ -185,6 +125,10 @@ class TestControl:
         with qtbot.wait_signal(signal, timeout=1000, raising=True):
             qtbot.mouseClick(control_window.form.ui.buttonInitialize,
                              QtCore.Qt.LeftButton)
+
+        # after the signal is emitted, the status should be initializing
+        assert control_window.form.ui.labelStatus.text() == "Initializing"
+        qtbot.wait(3000)
 
     def test_click_initialize_triggers_all_signals(self, control_window, qtbot):
         cwcs = control_window.control_signals
@@ -204,6 +148,7 @@ class TestControl:
 
         qtbot.mouseClick(control_window.form.ui.buttonInitialize,
                          QtCore.Qt.LeftButton)
+        qtbot.wait(2000) # Give the simulation time
 
         for item in blockers:
             print "Wait for item: ", item
@@ -222,6 +167,7 @@ class TestControl:
         assert control_window.form.ui.labelSourcePaddle.text() == "Home"
         assert control_window.form.ui.labelReferencePaddle.text() == "Home"
         assert control_window.form.ui.labelStagePosition.text() == "Home"
+        qtbot.wait(3000)
 
     def test_click_initialize_updates_controller_status(self, control_window, qtbot):
         signal = control_window.control_signals.source_paddle_move
@@ -234,6 +180,7 @@ class TestControl:
         assert control_window.form.ui.labelPaddleController.text() == "Ready"
         assert control_window.form.ui.labelStageController.text() == "Ready"
         assert control_window.form.ui.labelCameraController.text() == "Ready"
+        qtbot.wait(3000)
 
     def test_click_start_emits_signal(self, control_window, qtbot):
 
@@ -241,4 +188,5 @@ class TestControl:
         with qtbot.wait_signal(signal, timeout=1000, raising=True):
             qtbot.mouseClick(control_window.form.ui.buttonStart,
                              QtCore.Qt.LeftButton)
+        qtbot.wait(3000)
 

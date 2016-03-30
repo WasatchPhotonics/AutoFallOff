@@ -14,7 +14,7 @@ REFARM_COMPORT = "COM3"
 ZABERS_COMPORT = "COM4"
 
 class Controller(object):
-    def __init__(self, log_queue, hardware="real"):
+    def __init__(self, log_queue, hardware=None):
         log.debug("Control startup")
 
         self.hardware = hardware
@@ -154,7 +154,7 @@ class Controller(object):
 
             self.control_signals.paddle_controller.emit("Ready")
             self.control_signals.stage_controller.emit("Ready")
-            self.control_signals.camert_controller.emit("Ready")
+            self.control_signals.camera_controller.emit("Ready")
 
         else:
             log.warning("Cannot initialize")
