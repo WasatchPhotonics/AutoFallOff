@@ -39,6 +39,16 @@ model
         get frame
         save to disk
 
+    acquisition
+        source paddle position 
+        reference paddle position 
+        zaber stage position
+        collect:
+            data from camera, save to disk
+
+    exam
+        a list of acquisitions
+
 view
     hardware availability
         cameralink card + camera ok/not ok
@@ -60,6 +70,8 @@ controller
         attempt communications, set all controllers to home
 
     start /continue
+        pop the first item of the list, execute the various commands
+
     stop pauses current process
     events
 

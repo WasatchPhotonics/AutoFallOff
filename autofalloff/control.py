@@ -4,7 +4,7 @@ and UI updates with MVC style architecture.
 
 from PySide import QtCore
 
-from . import views, devices
+from . import views, devices, model
 from . import zaber_control, oct_hardware, simulated
 
 import logging
@@ -26,7 +26,40 @@ class Controller(object):
 
         self.setup_main_event_loop()
 
+        self.setup_model()
         self.setup_hardware(self.hardware)
+
+    def setup_model(self):
+        """ Create the exam list data structure of acquisitions.
+        Each distance has an reference, source and both image collected.
+
+        """
+        distances = [0.1, 0.5, 1, 1.5, 2, 2.5, 3.0, 3.5, 4.0, 4.5,
+                     5.0, 5.5, 6.0, 6.5, 7.0]
+
+        self.exam = []
+        self.acquisition_count = 0
+        for item in distances:
+            # Reference
+            acq = model.Acquisition(reference_paddle_position="open",
+                                    source_paddle_position="home",
+                                    zaber_stage_position=item,
+                                    camera_image_filename="%s.tif" % item)
+            self.exam.append(acq)
+
+            # Source
+            acq = model.Acquisition(reference_paddle_position="home",
+                                    source_paddle_position="open",
+                                    zaber_stage_position=item,
+                                    camera_image_filename="%s.tif" % item)
+            self.exam.append(acq)
+
+            # Both
+            acq = model.Acquisition(reference_paddle_position="open",
+                                    source_paddle_position="open",
+                                    zaber_stage_position=item,
+                                    camera_image_filename="%s.tif" % item)
+            self.exam.append(acq)
 
     def setup_hardware(self, hardware):
         """ Create connections to physical or simulated hardware devices.
@@ -131,11 +164,11 @@ class Controller(object):
 
         self.com_timer = QtCore.QTimer()
         self.com_timer.setSingleShot(True)
-        self.com_timer.timeout.connect(self.connect_COMPORT)
+        self.com_timer.timeout.connect(self.connect_hardware)
         self.com_timer.start(100)
         log.debug("Post initialize")
 
-    def connect_COMPORT(self):
+    def connect_hardware(self):
         """ Attempt communication with the reference arm and zaber com port,
         report the status in the logging area.  """
 
@@ -168,6 +201,29 @@ class Controller(object):
         log.info("Starting")
         self.form.ui.labelStatus.setText("Starting")
         self.control_signals.start.emit("Starting")
+
+        self.exam_timer = QtCore.QTimer()
+        self.exam_timer.setSingleShot(True)
+        self.exam_timer.timeout.connect(self.process_exam)
+        self.exam_timer.start(10)
+
+    def process_exam(self):
+        """ Process the exam list items in order, move the components as
+        specified.
+        """
+        current = self.exam[0]
+        self.exam = self.exam[1:]
+
+        self.acquisition_count += 1
+        log_str = "Acquisition %s, Reference: %s, Source: %s, " \
+                  % (self.acquisition_count, current.reference_paddle_position,
+                     current.source_paddle_position)
+
+        log_str += "Stage: %s, Filename: %s" \
+                   % (current.zaber_stage_position,
+                      current.camera_image_filename)
+
+        log.info(log_str)
 
     def stop(self):
         """ Stop the scan procedure.

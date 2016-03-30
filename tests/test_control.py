@@ -190,3 +190,20 @@ class TestControl:
                              QtCore.Qt.LeftButton)
         qtbot.wait(3000)
 
+    def test_control_creates_exam_structure(self, control_window):
+        assert control_window.exam != None
+
+        # Three acquisitions at each of the 15 stage positions
+        assert len(control_window.exam) == 45
+
+    def test_click_start_puts_first_exam_entry_in_log_file(self, control_window, qtbot, caplog):
+
+        signal = control_window.control_signals.start
+        with qtbot.wait_signal(signal, timeout=1000, raising=True):
+            qtbot.mouseClick(control_window.form.ui.buttonStart,
+                             QtCore.Qt.LeftButton)
+        qtbot.wait(1000)
+        log_str = "Acquisition 1, Reference: open, Source: home, " \
+                  + "Stage: 0.1, Filename: 0.1.tif"
+
+        assert log_str in caplog.text()
