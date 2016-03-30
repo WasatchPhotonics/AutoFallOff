@@ -211,8 +211,11 @@ class Controller(object):
         """ Process the exam list items in order, move the components as
         specified.
         """
-        current = self.exam[0]
-        self.exam = self.exam[1:]
+        if self.acquisition_count >= len(self.exam):
+            log.info("End of acquisitions in exam")
+            return
+
+        current = self.exam[self.acquisition_count]
 
         self.acquisition_count += 1
         log_str = "Acquisition %s, Reference: %s, Source: %s, " \
@@ -224,6 +227,7 @@ class Controller(object):
                       current.camera_image_filename)
 
         log.info(log_str)
+        self.exam_timer.start(10)
 
     def stop(self):
         """ Stop the scan procedure.

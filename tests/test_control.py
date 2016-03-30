@@ -207,3 +207,21 @@ class TestControl:
                   + "Stage: 0.1, Filename: 0.1.tif"
 
         assert log_str in caplog.text()
+
+
+    def test_click_start_puts_last_exam_entry_in_log_file(self, control_window, qtbot, caplog):
+        signal = control_window.control_signals.start
+        with qtbot.wait_signal(signal, timeout=1000, raising=True):
+            qtbot.mouseClick(control_window.form.ui.buttonStart,
+                             QtCore.Qt.LeftButton)
+        qtbot.wait(3000)
+        log_str = "Acquisition 1, Reference: open, Source: home, " \
+                  + "Stage: 0.1, Filename: 0.1.tif"
+
+        assert log_str in caplog.text()
+
+        log_str = "Acquisition 45, Reference: open, Source: open, " \
+                  + "Stage: 7.0, Filename: 7.0.tif"
+
+        assert log_str in caplog.text()
+
