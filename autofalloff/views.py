@@ -22,10 +22,41 @@ class BasicWindow(QtGui.QMainWindow):
         # x, y, w, h
         self.setGeometry(geometry[0], geometry[1], geometry[2], geometry[3])
 
+        self.load_placeholder_images()
+
         app_icon = QtGui.QIcon(":ui/images/ApplicationIcon.ico")
         self.setWindowIcon(app_icon)
         self.setWindowTitle(title)
         self.show()
+
+    def load_placeholder_images(self):
+        """ Use the example data 16 bit tiffs, make sure they can be displayed
+        in the qt label. Conversion is from:
+        http://blog.philippklaus.de/2011/08/handle-16bit-tiff-images-in-python/
+        """
+        filename = "autofalloff/assets/example_data/1.tif"
+        #filename = "autofalloff/assets/example_data/7.tif"
+
+        from PIL import Image
+
+        src = Image.open(filename)
+        src.convert("L").save("test.png")
+
+        new_src = Image.open(filename)
+        print new_src.size
+        print new_src.mode
+        new_src.convert("RGBA").save("ltest.jpg")
+        new_src.convert("I").save("i_test.png")
+        new_src.convert("P").save("p_test.png")
+
+        self.ui.labelSourceImage.setPixmap("i_test.png")
+        self.ui.labelReferenceImage.setPixmap("p_test.png")
+
+        import numpy
+        import pyqtgraph as pg
+        in_data = numpy.asarray(src, dtype=numpy.uint16)
+        in_data = in_data.T
+        pg.image(in_data)
 
     def create_signals(self):
         """ Create signal objects to be used by controller and internal simple

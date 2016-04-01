@@ -227,6 +227,7 @@ class Controller(object):
                       current.camera_image_filename)
 
         log.info(log_str)
+        self.form.ui.textLog.append(log_str)
         self.exam_timer.start(10)
 
     def stop(self):

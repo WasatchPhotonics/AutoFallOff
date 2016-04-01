@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'autofalloff/assets/basic_layout.ui'
 #
-# Created: Fri Mar 25 10:19:11 2016
+# Created: Thu Mar 31 14:00:06 2016
 #      by: pyside-uic 0.2.15 running on PySide 1.2.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -41,6 +41,9 @@ class Ui_MainWindow(object):
         self.frame_2.setFrameShape(QtGui.QFrame.StyledPanel)
         self.frame_2.setFrameShadow(QtGui.QFrame.Raised)
         self.frame_2.setObjectName("frame_2")
+        self.labelReferenceImage = QtGui.QLabel(self.frame_2)
+        self.labelReferenceImage.setGeometry(QtCore.QRect(30, 50, 191, 151))
+        self.labelReferenceImage.setObjectName("labelReferenceImage")
         self.verticalLayout.addWidget(self.frame_2)
         self.verticalLayoutWidget_2 = QtGui.QWidget(self.centralwidget)
         self.verticalLayoutWidget_2.setGeometry(QtCore.QRect(300, 300, 261, 261))
@@ -56,6 +59,9 @@ class Ui_MainWindow(object):
         self.frame_3.setFrameShape(QtGui.QFrame.StyledPanel)
         self.frame_3.setFrameShadow(QtGui.QFrame.Raised)
         self.frame_3.setObjectName("frame_3")
+        self.labelSourceImage = QtGui.QLabel(self.frame_3)
+        self.labelSourceImage.setGeometry(QtCore.QRect(30, 50, 191, 151))
+        self.labelSourceImage.setObjectName("labelSourceImage")
         self.verticalLayout_2.addWidget(self.frame_3)
         self.verticalLayoutWidget_3 = QtGui.QWidget(self.centralwidget)
         self.verticalLayoutWidget_3.setGeometry(QtCore.QRect(610, 300, 261, 261))
@@ -71,6 +77,9 @@ class Ui_MainWindow(object):
         self.frame_4.setFrameShape(QtGui.QFrame.StyledPanel)
         self.frame_4.setFrameShadow(QtGui.QFrame.Raised)
         self.frame_4.setObjectName("frame_4")
+        self.labelCombinedImage = QtGui.QLabel(self.frame_4)
+        self.labelCombinedImage.setGeometry(QtCore.QRect(20, 40, 191, 151))
+        self.labelCombinedImage.setObjectName("labelCombinedImage")
         self.verticalLayout_3.addWidget(self.frame_4)
         self.buttonStart = QtGui.QPushButton(self.centralwidget)
         self.buttonStart.setGeometry(QtCore.QRect(40, 80, 90, 27))
@@ -116,7 +125,7 @@ class Ui_MainWindow(object):
         self.textLog.setObjectName("textLog")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtGui.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 1000, 18))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 1000, 25))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtGui.QStatusBar(MainWindow)
@@ -133,8 +142,11 @@ class Ui_MainWindow(object):
         self.label_4.setText(QtGui.QApplication.translate("MainWindow", "Reference Paddle", None, QtGui.QApplication.UnicodeUTF8))
         self.labelStagePosition.setText(QtGui.QApplication.translate("MainWindow", "Pre-init", None, QtGui.QApplication.UnicodeUTF8))
         self.label_6.setText(QtGui.QApplication.translate("MainWindow", "Reference", None, QtGui.QApplication.UnicodeUTF8))
+        self.labelReferenceImage.setText(QtGui.QApplication.translate("MainWindow", "Reference Image", None, QtGui.QApplication.UnicodeUTF8))
         self.label_7.setText(QtGui.QApplication.translate("MainWindow", "Source", None, QtGui.QApplication.UnicodeUTF8))
+        self.labelSourceImage.setText(QtGui.QApplication.translate("MainWindow", "Source Image", None, QtGui.QApplication.UnicodeUTF8))
         self.label_8.setText(QtGui.QApplication.translate("MainWindow", "Combined", None, QtGui.QApplication.UnicodeUTF8))
+        self.labelCombinedImage.setText(QtGui.QApplication.translate("MainWindow", "Combined Image", None, QtGui.QApplication.UnicodeUTF8))
         self.buttonStart.setText(QtGui.QApplication.translate("MainWindow", "Start", None, QtGui.QApplication.UnicodeUTF8))
         self.buttonStop.setText(QtGui.QApplication.translate("MainWindow", "Stop", None, QtGui.QApplication.UnicodeUTF8))
         self.label_9.setText(QtGui.QApplication.translate("MainWindow", "Paddle Controller Status:", None, QtGui.QApplication.UnicodeUTF8))

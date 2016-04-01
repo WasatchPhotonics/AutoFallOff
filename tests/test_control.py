@@ -208,6 +208,9 @@ class TestControl:
 
         assert log_str in caplog.text()
 
+        textlog = control_window.form.ui.textLog.toPlainText()
+        assert log_str in textlog
+
 
     def test_click_start_puts_last_exam_entry_in_log_file(self, control_window, qtbot, caplog):
         signal = control_window.control_signals.start
@@ -224,4 +227,7 @@ class TestControl:
                   + "Stage: 7.0, Filename: 7.0.tif"
 
         assert log_str in caplog.text()
+
+        textlog = control_window.form.ui.textLog.toPlainText()
+        assert log_str in textlog
 

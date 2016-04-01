@@ -97,6 +97,19 @@
        <property name="frameShadow">
         <enum>QFrame::Raised</enum>
        </property>
+       <widget class="QLabel" name="labelReferenceImage">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>50</y>
+          <width>191</width>
+          <height>151</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Reference Image</string>
+        </property>
+       </widget>
       </widget>
      </item>
     </layout>
@@ -132,6 +145,19 @@
        <property name="frameShadow">
         <enum>QFrame::Raised</enum>
        </property>
+       <widget class="QLabel" name="labelSourceImage">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>50</y>
+          <width>191</width>
+          <height>151</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Source Image</string>
+        </property>
+       </widget>
       </widget>
      </item>
     </layout>
@@ -167,6 +193,19 @@
        <property name="frameShadow">
         <enum>QFrame::Raised</enum>
        </property>
+       <widget class="QLabel" name="labelCombinedImage">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>40</y>
+          <width>191</width>
+          <height>151</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Combined Image</string>
+        </property>
+       </widget>
       </widget>
      </item>
     </layout>
@@ -366,7 +405,7 @@
      <x>0</x>
      <y>0</y>
      <width>1000</width>
-     <height>18</height>
+     <height>25</height>
     </rect>
    </property>
   </widget>

@@ -41,3 +41,5 @@ class TestBasicMainWindow:
         assert basic_form.ui.buttonStart.text() == "Start"
         assert basic_form.ui.buttonStop.text() == "Stop"
 
+    def test_8bit_conversion_of_image_display(self, basic_form, qtbot):
+        qtbot.wait(5000)
