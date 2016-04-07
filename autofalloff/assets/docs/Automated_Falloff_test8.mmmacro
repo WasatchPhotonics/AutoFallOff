@@ -17,8 +17,8 @@ mgr q 90 Move reference paddle to open position
 (now both paddles are in open position)
 save sapera file as 0.1
 
-Distances are 0.2, 0.5, 1, 1.5, 2, 2.5, 3.0, 3.5, 4.0, 4.5, 
-              5.0, 5.5, 6.0, 6.5, 7.0
+Distances are 0.2, 0.5, 1, 1.5, 2, 2.5, 3.0, 3.5, 4.0
+Sample data is from C-00262
 
 model
     paddle object

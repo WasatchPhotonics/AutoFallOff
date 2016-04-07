@@ -2,6 +2,7 @@
 and UI updates with MVC style architecture.
 """
 
+import os
 import numpy
 
 from PySide import QtCore
@@ -244,9 +245,10 @@ class Controller(object):
         the interface with the returned data, save to disk as appropriate.
         """
 
-        log.info("Filename: %s", exam.camera_image_filename)
-        directory = "autofalloff/assets/example_data"
-        filename = "%s/%s" % (directory, exam.camera_image_filename)
+        self.create_directory(exam)
+
+        filename = "exams/%s/%s" % (exam.directory, exam.camera_image_filename)
+        log.info("Filename: %s", filename)
 
         # Open the image, convert in place
         ref_img = Image.open(filename)
@@ -260,6 +262,21 @@ class Controller(object):
         #orig_data = control_window.form.ui.imview_reference.getProcessedImage()[0]
         return
 
+    def create_directory(self, exam):
+        """ Create a local storage area for the tif files acquired from the
+        framegrabber
+        """
+
+        exam_dir = "exams/%s" % exam.directory
+        check = os.path.exists(exam_dir)
+        if not check:
+            log.info("Creating exams folder: %s", exam_dir)
+
+            result = os.makedirs(exam_dir)
+
+        check = os.path.exists(exam_dir)
+        if not check:
+            log.critical("Cannot create exams folder")
 
     def log_control(self, log_str=None):
         """ Apparently this is necessary for certain pytest runs to pass. It

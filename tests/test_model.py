@@ -37,3 +37,9 @@ class TestBasicAcquisition:
 
         assert now < acq.timestamp
 
+    def test_acquisition_object_directory_is_clean_timestamp(self):
+
+        acq = model.Acquisition()
+
+        clean_dir = acq.timestamp.strftime("%Y_%m_%d %H_%M_%S")
+        assert clean_dir == acq.directory

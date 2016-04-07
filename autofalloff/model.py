@@ -20,3 +20,4 @@ class Acquisition(object):
         self.camera_image_filename = camera_image_filename
 
         self.timestamp = datetime.datetime.now()
+        self.directory = self.timestamp.strftime("%Y_%m_%d %H_%M_%S")
