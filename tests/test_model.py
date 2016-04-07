@@ -2,6 +2,8 @@
 """
 
 import pytest
+import datetime
+import time
 
 from autofalloff import model
 
@@ -24,5 +26,14 @@ class TestBasicAcquisition:
         assert acq.zaber_stage_position == "0.1"
         assert acq.camera_image_filename == "0.1r.tif"
 
-    #def test_acquisition_object_has_timestamp(self):
-#
+    def test_acquisition_object_has_timestamp(self):
+
+        # Make sure timestamp is within 1 minute of now
+        now = datetime.datetime.now()
+
+        time.sleep(0.300)
+
+        acq = model.Acquisition()
+
+        assert now < acq.timestamp
+

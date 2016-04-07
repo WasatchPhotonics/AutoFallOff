@@ -3,6 +3,8 @@
 
 from PySide import QtCore
 
+import datetime
+
 import logging
 log = logging.getLogger(__name__)
 
@@ -17,3 +19,4 @@ class Acquisition(object):
         self.zaber_stage_position = zaber_stage_position
         self.camera_image_filename = camera_image_filename
 
+        self.timestamp = datetime.datetime.now()
