@@ -39,9 +39,9 @@ class BasicWindow(QtGui.QMainWindow):
         http://blog.philippklaus.de/2011/08/handle-16bit-tiff-images-in-python/
         """
         directory = "autofalloff/assets/example_data"
-        reference_filename = "%s/1r.tif" % directory
-        source_filename = "%s/4s.tif" % directory
-        combined_filename = "%s/7.tif" % directory
+        reference_filename = "%s/0.2r.tif" % directory
+        source_filename = "%s/1.0s.tif" % directory
+        combined_filename = "%s/4.0.tif" % directory
 
         # Open the image, convert in place
         ref_img = Image.open(reference_filename)

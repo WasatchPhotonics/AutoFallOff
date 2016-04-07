@@ -194,7 +194,7 @@ class TestControl:
         assert control_window.exam != None
 
         # Three acquisitions at each of the 15 stage positions
-        assert len(control_window.exam) == 45
+        assert len(control_window.exam) ==27
 
     def test_click_start_puts_first_exam_entry_in_log_file(self, control_window, qtbot, caplog):
 
@@ -204,7 +204,7 @@ class TestControl:
                              QtCore.Qt.LeftButton)
         qtbot.wait(1000)
         log_str = "Acquisition 1, Reference: open, Source: home, " \
-                  + "Stage: 0.1, Filename: 0.1.tif"
+                  + "Stage: 0.2, Filename: 0.2.tif"
 
         assert log_str in caplog.text()
 
@@ -219,12 +219,12 @@ class TestControl:
                              QtCore.Qt.LeftButton)
         qtbot.wait(3000)
         log_str = "Acquisition 1, Reference: open, Source: home, " \
-                  + "Stage: 0.1, Filename: 0.1.tif"
+                  + "Stage: 0.2, Filename: 0.2.tif"
 
         assert log_str in caplog.text()
 
-        log_str = "Acquisition 45, Reference: open, Source: open, " \
-                  + "Stage: 7.0, Filename: 7.0.tif"
+        log_str = "Acquisition 27, Reference: open, Source: open, " \
+                  + "Stage: 4.0, Filename: 4.0.tif"
 
         assert log_str in caplog.text()
 
@@ -239,10 +239,11 @@ class TestControl:
             qtbot.mouseClick(control_window.form.ui.buttonStart,
                              QtCore.Qt.LeftButton)
 
+        qtbot.wait(3000)
         new_data = control_window.form.ui.imview_reference.getProcessedImage()[0]
 
         assert len(new_data) == len(orig_data)
         print "orig ", orig_data
         print "new ", new_data
-        #assert new_data[0] != orig_data[0]
-        #assert new_data[-1] != orig_data[-1]
+        assert new_data[0] != orig_data[0]
+        assert new_data[-1] != orig_data[-1]

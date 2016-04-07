@@ -2,7 +2,10 @@
 and UI updates with MVC style architecture.
 """
 
+import numpy
+
 from PySide import QtCore
+from PIL import Image
 
 from . import views, devices, model
 from . import zaber_control, oct_hardware, simulated
@@ -34,8 +37,7 @@ class Controller(object):
         Each distance has an reference, source and both image collected.
 
         """
-        distances = [0.1, 0.5, 1, 1.5, 2, 2.5, 3.0, 3.5, 4.0, 4.5,
-                     5.0, 5.5, 6.0, 6.5, 7.0]
+        distances = [0.2, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0]
 
         self.exam = []
         self.stop_exam = False
@@ -241,6 +243,19 @@ class Controller(object):
         """ Issue the hardware commands for specify exam components. Popuplate
         the interface with the returned data, save to disk as appropriate.
         """
+
+        log.info("Filename: %s", exam.camera_image_filename)
+        directory = "autofalloff/assets/example_data"
+        filename = "%s/%s" % (directory, exam.camera_image_filename)
+
+        # Open the image, convert in place
+        ref_img = Image.open(filename)
+        ref_img.convert("L")
+
+        # Assign it to a numpy array, transpose X and Y dimensions
+        ref_data = numpy.asarray(ref_img, dtype=numpy.uint16).T
+
+        self.form.ui.imview_reference.setImage(ref_data)
 
         #orig_data = control_window.form.ui.imview_reference.getProcessedImage()[0]
         return
