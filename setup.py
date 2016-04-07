@@ -12,6 +12,7 @@ requires = [
     "pytest-capturelog",
     "pyside",
     "pyserial",
+    "pillow",
     ]
 
 setup(name="autofalloff",

@@ -242,5 +242,7 @@ class TestControl:
         new_data = control_window.form.ui.imview_reference.getProcessedImage()[0]
 
         assert len(new_data) == len(orig_data)
+        print "orig ", orig_data
+        print "new ", new_data
         assert new_data[0] != orig_data[0]
         assert new_data[-1] != orig_data[-1]

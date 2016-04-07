@@ -38,6 +38,7 @@ class Controller(object):
                      5.0, 5.5, 6.0, 6.5, 7.0]
 
         self.exam = []
+        self.stop_exam = False
         self.acquisition_count = 0
         for item in distances:
             # Reference
@@ -199,6 +200,7 @@ class Controller(object):
         """ Start the scan procedure.
         """
         log.info("Starting")
+        self.stop_exam = False
         self.form.ui.labelStatus.setText("Starting")
         self.control_signals.start.emit("Starting")
 
@@ -215,6 +217,10 @@ class Controller(object):
             log.info("End of acquisitions in exam")
             return
 
+        if self.stop_exam == True:
+            log.info("Stopping process for stop exam")
+            return
+
         current = self.exam[self.acquisition_count]
 
         self.acquisition_count += 1
@@ -226,14 +232,26 @@ class Controller(object):
                    % (current.zaber_stage_position,
                       current.camera_image_filename)
 
-        log.info(log_str)
-        self.form.ui.textLog.append(log_str)
+        self.log_control(log_str)
         self.exam_timer.start(10)
+
+    def log_control(self, log_str=None):
+        """ Apparently this is necessary for certain pytest runs to pass. It
+        looks like certain timing issues can cause the attempt to add the text
+        to the text box after it has been destroyed. Catching the exception
+        allows the tests to pass.  """
+        log.info(log_str)
+        try:
+            self.form.ui.textLog.append(log_str)
+        except Exception as exc:
+            log.error("Attempt to add to text box: %s", exc)
+
 
     def stop(self):
         """ Stop the scan procedure.
         """
         log.info("Stopping")
+        self.stop_exam = True
         self.form.ui.labelStatus.setText("Stopping")
         self.control_signals.stop.emit("Stopping")
 
