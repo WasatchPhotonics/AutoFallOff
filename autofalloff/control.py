@@ -222,8 +222,8 @@ class Controller(object):
             return
 
         current = self.exam[self.acquisition_count]
-
         self.acquisition_count += 1
+
         log_str = "Acquisition %s, Reference: %s, Source: %s, " \
                   % (self.acquisition_count, current.reference_paddle_position,
                      current.source_paddle_position)
@@ -232,8 +232,19 @@ class Controller(object):
                    % (current.zaber_stage_position,
                       current.camera_image_filename)
 
+        self.execute_exam(current)
+
         self.log_control(log_str)
         self.exam_timer.start(10)
+
+    def execute_exam(self, exam):
+        """ Issue the hardware commands for specify exam components. Popuplate
+        the interface with the returned data, save to disk as appropriate.
+        """
+
+        #orig_data = control_window.form.ui.imview_reference.getProcessedImage()[0]
+        return
+
 
     def log_control(self, log_str=None):
         """ Apparently this is necessary for certain pytest runs to pass. It

@@ -24,3 +24,5 @@ class TestBasicAcquisition:
         assert acq.zaber_stage_position == "0.1"
         assert acq.camera_image_filename == "0.1r.tif"
 
+    #def test_acquisition_object_has_timestamp(self):
+#

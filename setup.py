@@ -13,6 +13,7 @@ requires = [
     "pyside",
     "pyserial",
     "pillow",
+    "pyqtgraph",
     ]
 
 setup(name="autofalloff",
