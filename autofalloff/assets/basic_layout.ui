@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1000</width>
-    <height>700</height>
+    <width>1102</width>
+    <height>843</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -71,8 +71,8 @@
      <rect>
       <x>10</x>
       <y>300</y>
-      <width>261</width>
-      <height>261</height>
+      <width>741</width>
+      <height>481</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
@@ -97,18 +97,34 @@
        <property name="frameShadow">
         <enum>QFrame::Raised</enum>
        </property>
-       <widget class="QLabel" name="labelReferenceImage">
+       <widget class="QStackedWidget" name="stackedWidgetReference">
         <property name="geometry">
          <rect>
-          <x>30</x>
-          <y>50</y>
-          <width>191</width>
-          <height>151</height>
+          <x>9</x>
+          <y>29</y>
+          <width>711</width>
+          <height>411</height>
          </rect>
         </property>
-        <property name="text">
-         <string>Reference Image</string>
+        <property name="currentIndex">
+         <number>0</number>
         </property>
+        <widget class="QWidget" name="page">
+         <widget class="QLabel" name="labelReferenceImage">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>20</y>
+            <width>191</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Reference Image</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="page_2"/>
        </widget>
       </widget>
      </item>
@@ -117,8 +133,8 @@
    <widget class="QWidget" name="verticalLayoutWidget_2">
     <property name="geometry">
      <rect>
-      <x>300</x>
-      <y>300</y>
+      <x>760</x>
+      <y>250</y>
       <width>261</width>
       <height>261</height>
      </rect>
@@ -145,18 +161,34 @@
        <property name="frameShadow">
         <enum>QFrame::Raised</enum>
        </property>
-       <widget class="QLabel" name="labelSourceImage">
+       <widget class="QStackedWidget" name="stackedWidgetSource">
         <property name="geometry">
          <rect>
-          <x>30</x>
-          <y>50</y>
-          <width>191</width>
-          <height>151</height>
+          <x>10</x>
+          <y>20</y>
+          <width>221</width>
+          <height>191</height>
          </rect>
         </property>
-        <property name="text">
-         <string>Source Image</string>
+        <property name="currentIndex">
+         <number>0</number>
         </property>
+        <widget class="QWidget" name="page_3">
+         <widget class="QLabel" name="labelReferenceImage_2">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>20</y>
+            <width>191</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Source Image</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="page_4"/>
        </widget>
       </widget>
      </item>
@@ -165,8 +197,8 @@
    <widget class="QWidget" name="verticalLayoutWidget_3">
     <property name="geometry">
      <rect>
-      <x>610</x>
-      <y>300</y>
+      <x>780</x>
+      <y>520</y>
       <width>261</width>
       <height>261</height>
      </rect>
@@ -193,18 +225,34 @@
        <property name="frameShadow">
         <enum>QFrame::Raised</enum>
        </property>
-       <widget class="QLabel" name="labelCombinedImage">
+       <widget class="QStackedWidget" name="stackedWidgetCombined">
         <property name="geometry">
          <rect>
-          <x>20</x>
-          <y>40</y>
-          <width>191</width>
-          <height>151</height>
+          <x>10</x>
+          <y>20</y>
+          <width>221</width>
+          <height>191</height>
          </rect>
         </property>
-        <property name="text">
-         <string>Combined Image</string>
+        <property name="currentIndex">
+         <number>0</number>
         </property>
+        <widget class="QWidget" name="page_5">
+         <widget class="QLabel" name="labelReferenceImage_3">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>20</y>
+            <width>191</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Combined Image</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="page_6"/>
        </widget>
       </widget>
      </item>
@@ -404,7 +452,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1000</width>
+     <width>1102</width>
      <height>25</height>
     </rect>
    </property>

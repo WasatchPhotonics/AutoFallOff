@@ -231,3 +231,16 @@ class TestControl:
         textlog = control_window.form.ui.textLog.toPlainText()
         assert log_str in textlog
 
+    def test_click_start_updates_reference_graph(self, control_window, qtbot):
+        orig_data = control_window.form.ui.imview_reference.getProcessedImage()[0]
+
+        signal = control_window.control_signals.start
+        with qtbot.wait_signal(signal, timeout=1000, raising=True):
+            qtbot.mouseClick(control_window.form.ui.buttonStart,
+                             QtCore.Qt.LeftButton)
+
+        new_data = control_window.form.ui.imview_reference.getProcessedImage()[0]
+
+        assert len(new_data) == len(orig_data)
+        assert new_data[0] != orig_data[0]
+        assert new_data[-1] != orig_data[-1]

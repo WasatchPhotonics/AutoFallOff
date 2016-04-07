@@ -2,6 +2,10 @@
 """
 from PySide import QtGui, QtCore
 
+from PIL import Image  # for creating placeholder imagery at startup
+import numpy
+import pyqtgraph
+
 from .assets import basic_layout
 
 import logging
@@ -34,29 +38,45 @@ class BasicWindow(QtGui.QMainWindow):
         in the qt label. Conversion is from:
         http://blog.philippklaus.de/2011/08/handle-16bit-tiff-images-in-python/
         """
-        filename = "autofalloff/assets/example_data/1.tif"
-        #filename = "autofalloff/assets/example_data/7.tif"
+        directory = "autofalloff/assets/example_data"
+        reference_filename = "%s/1r.tif" % directory
+        source_filename = "%s/4s.tif" % directory
+        combined_filename = "%s/7.tif" % directory
 
-        from PIL import Image
+        # Open the image, convert in place
+        ref_img = Image.open(reference_filename)
+        ref_img.convert("L")
 
-        src = Image.open(filename)
-        src.convert("L").save("test.png")
+        # Assign it to a numpy array, transpose X and Y dimensions
+        ref_data = numpy.asarray(ref_img, dtype=numpy.uint16).T
 
-        new_src = Image.open(filename)
-        print new_src.size
-        print new_src.mode
-        new_src.convert("RGBA").save("ltest.jpg")
-        new_src.convert("I").save("i_test.png")
-        new_src.convert("P").save("p_test.png")
+        # Create an imageview control, assign the data and make it visible
+        self.ui.imview_reference = pyqtgraph.ImageView()
+        self.ui.imview_reference.setImage(ref_data)
+        self.ui.stackedWidgetReference.addWidget(self.ui.imview_reference)
+        self.ui.stackedWidgetReference.setCurrentIndex(2)
 
-        self.ui.labelSourceImage.setPixmap("i_test.png")
-        self.ui.labelReferenceImage.setPixmap("p_test.png")
+        # source image
+        src_img = Image.open(source_filename)
+        src_img.convert("L")
+        src_data = numpy.asarray(src_img, dtype=numpy.uint16).T
 
-        import numpy
-        import pyqtgraph as pg
-        in_data = numpy.asarray(src, dtype=numpy.uint16)
-        in_data = in_data.T
-        pg.image(in_data)
+        self.ui.imview_source = pyqtgraph.ImageView()
+        self.ui.imview_source.setImage(src_data)
+        self.ui.stackedWidgetSource.addWidget(self.ui.imview_source)
+        self.ui.stackedWidgetSource.setCurrentIndex(2)
+
+
+        # Combined image
+        com_img = Image.open(combined_filename)
+        com_img.convert("L")
+        com_data = numpy.asarray(com_img, dtype=numpy.uint16).T
+
+        self.ui.imview_combined = pyqtgraph.ImageView()
+        self.ui.imview_combined.setImage(com_data)
+        self.ui.stackedWidgetCombined.addWidget(self.ui.imview_combined)
+        self.ui.stackedWidgetCombined.setCurrentIndex(2)
+
 
     def create_signals(self):
         """ Create signal objects to be used by controller and internal simple
