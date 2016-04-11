@@ -250,14 +250,14 @@ class TestControl:
         assert new_data[-1] != orig_data[-1]
 
 
-    def test_click_start_writes_camera_files_to_disk(self, control_window, qtbot):
+    def test_click_start_writes_first_camera_file_to_disk(self, control_window, qtbot):
 
         signal = control_window.control_signals.start
         with qtbot.wait_signal(signal, timeout=1000, raising=True):
             qtbot.mouseClick(control_window.form.ui.buttonStart,
                              QtCore.Qt.LeftButton)
 
-        qtbot.wait(1000)
+        qtbot.wait(3000)
 
         # Assume by this point that the file from the first exam in the list has
         # been written to disk
@@ -269,5 +269,21 @@ class TestControl:
         assert result == True
 
 
+    def test_click_start_writes_all_camera_files_to_disk(self, control_window, qtbot):
+        signal = control_window.control_signals.finished
+        with qtbot.wait_signal(signal, timeout=5000, raising=True):
+            qtbot.mouseClick(control_window.form.ui.buttonStart,
+                             QtCore.Qt.LeftButton)
 
+        # After full process, make sure each derivation of the r,s, and "both"
+        # tifs are present in the exam directory
+        exam_count = 0
+        for exam in control_window.exam:
+            filename = "exams/%s/%s" % (exam.directory,
+                                        exam.camera_image_filename)
+            result = os.path.exists(filename)
+            assert result == True
+            exam_count += 1
+
+        assert exam_count == len(control_window.exam)
 

@@ -48,14 +48,14 @@ class Controller(object):
             acq = model.Acquisition(reference_paddle_position="open",
                                     source_paddle_position="home",
                                     zaber_stage_position=item,
-                                    camera_image_filename="%s.tif" % item)
+                                    camera_image_filename="%sr.tif" % item)
             self.exam.append(acq)
 
             # Source
             acq = model.Acquisition(reference_paddle_position="home",
                                     source_paddle_position="open",
                                     zaber_stage_position=item,
-                                    camera_image_filename="%s.tif" % item)
+                                    camera_image_filename="%ss.tif" % item)
             self.exam.append(acq)
 
             # Both
@@ -96,6 +96,7 @@ class Controller(object):
 
             start = QtCore.Signal(str)
             stop = QtCore.Signal(str)
+            finished = QtCore.Signal(str)
 
         self.control_signals = ControlSignals()
 
@@ -219,6 +220,7 @@ class Controller(object):
         """
         if self.acquisition_count >= len(self.exam):
             log.info("End of acquisitions in exam")
+            self.control_signals.finished.emit("Finished")
             return
 
         if self.stop_exam == True:
