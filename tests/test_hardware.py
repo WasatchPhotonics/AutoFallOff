@@ -1,6 +1,7 @@
-""" Provide a set of tests cases to demonstrate a basic device that meets
-wasatch needs. This includes simple blocking and long polling separate process
-devices.
+""" Provide a set of tests cases to demonstrate hardware control of various
+components in the AutoFallOff application. This includes zaber translation
+stage, paddle polarization controller (re-used as a shutter), and sapera frame
+grabber.
 """
 
 import time
@@ -22,6 +23,20 @@ class TestSimulatedDevices:
         status = zaber.getStatus()
 
         assert status == "idle"
+
+    def test_simulated_camera_status(self, caplog):
+        sapera = simulated.SaperaControl()
+        status = sapera.get_status()
+
+        assert status == "idle"
+
+    def test_simulated_camera_returns_data(self, caplog):
+        sapera = simulated.SaperaControl()
+        first_result = sapera.get_image()
+        second_result = sapera.get_image()
+
+        # Is first 100 bytes raw read from a tiff a truly valid differentiator?
+        assert first_result[0:100] != second_result[0:100]
 
 @pytest.mark.skipif(not pytest.config.getoption("--hardware"),
                     reason="need --hardware option to run")

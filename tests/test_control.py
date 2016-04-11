@@ -5,6 +5,7 @@ with the queue handler as part of the test case, as opposed to having the
 controller create the top level logger
 """
 
+import os
 import time
 
 import pytest
@@ -247,3 +248,26 @@ class TestControl:
         #print "new ", new_data
         assert new_data[0] != orig_data[0]
         assert new_data[-1] != orig_data[-1]
+
+
+    def test_click_start_writes_camera_files_to_disk(self, control_window, qtbot):
+
+        signal = control_window.control_signals.start
+        with qtbot.wait_signal(signal, timeout=1000, raising=True):
+            qtbot.mouseClick(control_window.form.ui.buttonStart,
+                             QtCore.Qt.LeftButton)
+
+        qtbot.wait(1000)
+
+        # Assume by this point that the file from the first exam in the list has
+        # been written to disk
+        first_exam = control_window.exam[0]
+
+        filename = "exams/%s/%s" % (first_exam.directory,
+                                    first_exam.camera_image_filename)
+        result = os.path.exists(filename)
+        assert result == True
+
+
+
+

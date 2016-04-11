@@ -74,6 +74,7 @@ class Controller(object):
         else:
             self.refarm = simulated.RefArmControl(REFARM_COMPORT)
             self.zaber = simulated.ZaberControl(ZABERS_COMPORT)
+            self.camera = simulated.SaperaControl()
 
     def create_signals(self):
         """ Create signals for access by parent process.
@@ -250,6 +251,16 @@ class Controller(object):
         filename = "exams/%s/%s" % (exam.directory, exam.camera_image_filename)
         log.info("Filename: %s", filename)
 
+        # Move paddles
+
+        # Move stage
+
+        # Collect imagery
+        raw_data = self.camera.get_image()
+        with open(filename, "wb") as out_file:
+            out_file.write(raw_data)
+
+
         # Open the image, convert in place
         ref_img = Image.open(filename)
         ref_img.convert("L")
@@ -262,6 +273,7 @@ class Controller(object):
         #orig_data = control_window.form.ui.imview_reference.getProcessedImage()[0]
         return
 
+
     def create_directory(self, exam):
         """ Create a local storage area for the tif files acquired from the
         framegrabber
@@ -271,12 +283,11 @@ class Controller(object):
         check = os.path.exists(exam_dir)
         if not check:
             log.info("Creating exams folder: %s", exam_dir)
-
             result = os.makedirs(exam_dir)
 
         check = os.path.exists(exam_dir)
         if not check:
-            log.critical("Cannot create exams folder")
+            log.critical("Exams folder does not exist: %s", exam_dir)
 
     def log_control(self, log_str=None):
         """ Apparently this is necessary for certain pytest runs to pass. It
