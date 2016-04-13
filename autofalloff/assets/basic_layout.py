@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'autofalloff/assets/basic_layout.ui'
 #
-# Created: Wed Apr 13 07:46:19 2016
+# Created: Wed Apr 13 09:11:23 2016
 #      by: pyside-uic 0.2.15 running on PySide 1.2.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -12,7 +12,7 @@ from PySide import QtCore, QtGui
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1133, 636)
+        MainWindow.resize(1133, 597)
         self.centralwidget = QtGui.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.verticalLayoutWidget = QtGui.QWidget(self.centralwidget)
@@ -167,9 +167,6 @@ class Ui_MainWindow(object):
         self.menubar.setGeometry(QtCore.QRect(0, 0, 1133, 25))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
-        self.statusbar = QtGui.QStatusBar(MainWindow)
-        self.statusbar.setObjectName("statusbar")
-        MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
         self.stackedWidgetReference.setCurrentIndex(0)
