@@ -23,7 +23,7 @@ class Controller(object):
 
         self.hardware = hardware
 
-        self.form = views.BasicWindow()
+        self.form = views.BasicWindow(geometry=(200,200,1133,646))
 
         self.create_signals()
         self.bind_view_signals()
@@ -206,6 +206,7 @@ class Controller(object):
         """
         log.info("Starting")
         self.stop_exam = False
+        self.acquisition_count = 0
         self.form.ui.labelStatus.setText("Starting")
         self.control_signals.start.emit("Starting")
 
@@ -270,7 +271,12 @@ class Controller(object):
         # Assign it to a numpy array, transpose X and Y dimensions
         ref_data = numpy.asarray(ref_img, dtype=numpy.uint16).T
 
-        self.form.ui.imview_reference.setImage(ref_data)
+        if "s.tif" in filename:
+            self.form.ui.imview_source.setImage(ref_data)
+        elif "r.tif" in filename:
+            self.form.ui.imview_reference.setImage(ref_data)
+        else:
+            self.form.ui.imview_combined.setImage(ref_data)
 
         #orig_data = control_window.form.ui.imview_reference.getProcessedImage()[0]
         return

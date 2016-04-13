@@ -6,73 +6,21 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1102</width>
-    <height>843</height>
+    <width>1133</width>
+    <height>636</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>450</x>
-      <y>100</y>
-      <width>171</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Source Paddle:</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="labelSourcePaddle">
-    <property name="geometry">
-     <rect>
-      <x>560</x>
-      <y>100</y>
-      <width>51</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Pre-init</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_4">
-    <property name="geometry">
-     <rect>
-      <x>440</x>
-      <y>120</y>
-      <width>111</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Reference Paddle</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="labelStagePosition">
-    <property name="geometry">
-     <rect>
-      <x>560</x>
-      <y>160</y>
-      <width>91</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Pre-init</string>
-    </property>
-   </widget>
    <widget class="QWidget" name="verticalLayoutWidget">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>300</y>
-      <width>741</width>
-      <height>481</height>
+      <y>190</y>
+      <width>371</width>
+      <height>381</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
@@ -100,10 +48,10 @@
        <widget class="QStackedWidget" name="stackedWidgetReference">
         <property name="geometry">
          <rect>
-          <x>9</x>
-          <y>29</y>
-          <width>711</width>
-          <height>411</height>
+          <x>10</x>
+          <y>20</y>
+          <width>321</width>
+          <height>321</height>
          </rect>
         </property>
         <property name="currentIndex">
@@ -133,10 +81,10 @@
    <widget class="QWidget" name="verticalLayoutWidget_2">
     <property name="geometry">
      <rect>
-      <x>760</x>
-      <y>250</y>
-      <width>261</width>
-      <height>261</height>
+      <x>400</x>
+      <y>190</y>
+      <width>351</width>
+      <height>381</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -166,8 +114,8 @@
          <rect>
           <x>10</x>
           <y>20</y>
-          <width>221</width>
-          <height>191</height>
+          <width>321</width>
+          <height>321</height>
          </rect>
         </property>
         <property name="currentIndex">
@@ -197,10 +145,10 @@
    <widget class="QWidget" name="verticalLayoutWidget_3">
     <property name="geometry">
      <rect>
-      <x>780</x>
-      <y>520</y>
-      <width>261</width>
-      <height>261</height>
+      <x>760</x>
+      <y>190</y>
+      <width>351</width>
+      <height>381</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -230,8 +178,8 @@
          <rect>
           <x>10</x>
           <y>20</y>
-          <width>221</width>
-          <height>191</height>
+          <width>321</width>
+          <height>321</height>
          </rect>
         </property>
         <property name="currentIndex">
@@ -261,8 +209,8 @@
    <widget class="QPushButton" name="buttonStart">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>80</y>
+      <x>30</x>
+      <y>70</y>
       <width>90</width>
       <height>27</height>
      </rect>
@@ -274,8 +222,8 @@
    <widget class="QPushButton" name="buttonStop">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>120</y>
+      <x>30</x>
+      <y>110</y>
       <width>90</width>
       <height>27</height>
      </rect>
@@ -284,50 +232,11 @@
      <string>Stop</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_9">
-    <property name="geometry">
-     <rect>
-      <x>170</x>
-      <y>100</y>
-      <width>221</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Paddle Controller Status:</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_10">
-    <property name="geometry">
-     <rect>
-      <x>170</x>
-      <y>130</y>
-      <width>221</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Stage controller status:</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_11">
-    <property name="geometry">
-     <rect>
-      <x>170</x>
-      <y>160</y>
-      <width>221</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Camera controlelr status:</string>
-    </property>
-   </widget>
    <widget class="QPushButton" name="buttonInitialize">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>40</y>
+      <x>30</x>
+      <y>30</y>
       <width>90</width>
       <height>27</height>
      </rect>
@@ -339,8 +248,8 @@
    <widget class="QLabel" name="labelStatus">
     <property name="geometry">
      <rect>
-      <x>230</x>
-      <y>40</y>
+      <x>200</x>
+      <y>10</y>
       <width>251</width>
       <height>16</height>
      </rect>
@@ -352,8 +261,8 @@
    <widget class="QLabel" name="label_12">
     <property name="geometry">
      <rect>
-      <x>170</x>
-      <y>40</y>
+      <x>140</x>
+      <y>10</y>
       <width>59</width>
       <height>15</height>
      </rect>
@@ -362,97 +271,151 @@
      <string>Status:</string>
     </property>
    </widget>
-   <widget class="QLabel" name="labelReferencePaddle">
-    <property name="geometry">
-     <rect>
-      <x>560</x>
-      <y>120</y>
-      <width>51</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Pre-init</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_14">
-    <property name="geometry">
-     <rect>
-      <x>440</x>
-      <y>160</y>
-      <width>111</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Stage Position:</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="labelPaddleController">
-    <property name="geometry">
-     <rect>
-      <x>350</x>
-      <y>100</y>
-      <width>51</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Pre-init</string>
-    </property>
-    <property name="buddy">
-     <cstring></cstring>
-    </property>
-   </widget>
-   <widget class="QLabel" name="labelStageController">
-    <property name="geometry">
-     <rect>
-      <x>350</x>
-      <y>130</y>
-      <width>51</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Pre-init</string>
-    </property>
-    <property name="buddy">
-     <cstring></cstring>
-    </property>
-   </widget>
-   <widget class="QLabel" name="labelCameraController">
-    <property name="geometry">
-     <rect>
-      <x>350</x>
-      <y>160</y>
-      <width>51</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Pre-init</string>
-    </property>
-    <property name="buddy">
-     <cstring></cstring>
-    </property>
-   </widget>
    <widget class="QTextEdit" name="textLog">
     <property name="geometry">
      <rect>
-      <x>640</x>
+      <x>380</x>
       <y>30</y>
-      <width>321</width>
-      <height>241</height>
+      <width>731</width>
+      <height>141</height>
      </rect>
     </property>
    </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>30</y>
+      <width>216</width>
+      <height>59</height>
+     </rect>
+    </property>
+    <layout class="QFormLayout" name="formLayout">
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_9">
+       <property name="text">
+        <string>Paddle Controller Status:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLabel" name="labelPaddleController">
+       <property name="text">
+        <string>Pre-init</string>
+       </property>
+       <property name="buddy">
+        <cstring></cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_10">
+       <property name="text">
+        <string>Stage controller status:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLabel" name="labelStageController">
+       <property name="text">
+        <string>Pre-init</string>
+       </property>
+       <property name="buddy">
+        <cstring></cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="label_11">
+       <property name="text">
+        <string>Camera controlelr status:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLabel" name="labelCameraController">
+       <property name="text">
+        <string>Pre-init</string>
+       </property>
+       <property name="buddy">
+        <cstring></cstring>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>100</y>
+      <width>166</width>
+      <height>59</height>
+     </rect>
+    </property>
+    <layout class="QFormLayout" name="formLayout_2">
+     <item row="0" column="1">
+      <widget class="QLabel" name="labelSourcePaddle">
+       <property name="text">
+        <string>Pre-init</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_4">
+       <property name="text">
+        <string>Reference Paddle:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLabel" name="labelReferencePaddle">
+       <property name="text">
+        <string>Pre-init</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="label_14">
+       <property name="text">
+        <string>Stage Position:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLabel" name="labelStagePosition">
+       <property name="text">
+        <string>Pre-init</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Source Paddle:</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <zorder>layoutWidget</zorder>
+   <zorder>layoutWidget</zorder>
+   <zorder>verticalLayoutWidget</zorder>
+   <zorder>verticalLayoutWidget_2</zorder>
+   <zorder>verticalLayoutWidget_3</zorder>
+   <zorder>buttonStart</zorder>
+   <zorder>buttonStop</zorder>
+   <zorder>buttonInitialize</zorder>
+   <zorder>labelStatus</zorder>
+   <zorder>label_12</zorder>
+   <zorder>textLog</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1102</width>
+     <width>1133</width>
      <height>25</height>
     </rect>
    </property>
