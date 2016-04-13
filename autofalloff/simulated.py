@@ -51,9 +51,9 @@ class SaperaControl(object):
         acquisition.
         """
 
-        directory = "autofalloff\\assets\\example_data"
+        directory = "autofalloff/assets/example_data"
         current = self.distances[self.position]
-        filename = "%s\\%s.tif" % (directory, current)
+        filename = "%s/%s.tif" % (directory, current)
 
         self.position += 1
         if self.position == len(self.distances):

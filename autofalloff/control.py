@@ -251,9 +251,8 @@ class Controller(object):
 
         self.create_directory(exam)
 
-        filename = "exams\%s\%s" % (exam.directory, exam.camera_image_filename)
+        filename = "exams/%s/%s" % (exam.directory, exam.camera_image_filename)
         log.info("Filename: %s", filename)
-
 
         # Move paddles
 
