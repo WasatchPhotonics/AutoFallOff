@@ -250,6 +250,10 @@ class TestControl:
         assert new_data[-1] != orig_data[-1]
 
 
+        # Post-wait required so pyqtgraph radio button is not deleted in the
+        # next test - this is symptomatic of incorrect test case closings
+        qtbot.wait(5000)
+
     def test_click_start_writes_first_camera_file_to_disk(self, control_window, qtbot):
 
         signal = control_window.control_signals.start
@@ -268,6 +272,7 @@ class TestControl:
         result = os.path.exists(filename)
         assert result == True
 
+        # Radio button fail? see the previous test end
 
     def test_click_start_writes_all_camera_files_to_disk(self, control_window, qtbot):
         signal = control_window.control_signals.finished
@@ -286,4 +291,3 @@ class TestControl:
             exam_count += 1
 
         assert exam_count == len(control_window.exam)
-
