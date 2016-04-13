@@ -11,3 +11,15 @@ spectrometers. Provide visual feedback for stage position, processing
 progress and fall off curve collection procedures.
 
 
+Environment setup instructions
+
+    On Windows 7, install Miniconda-latest-Windows-x86_64
+    (Using windows command prompt, as there appears to still be issues
+    using conda in bash as part of the git for windows install)
+    conda update conda
+    conda --version (4.0.5 for these instructions)
+    conda create --name autofalloff_conda pyside numpy pytest
+    activate autofalloff_conda
+    python setup.py develop
+
+    

@@ -194,8 +194,8 @@ class TestControl:
     def test_control_creates_exam_structure(self, control_window):
         assert control_window.exam != None
 
-        # Three acquisitions at each of the 15 stage positions
-        assert len(control_window.exam) ==27
+        # Three acquisitions at each of the 9 stage positions
+        assert len(control_window.exam) == 27
 
     def test_click_start_puts_first_exam_entry_in_log_file(self, control_window, qtbot, caplog):
 
@@ -205,7 +205,7 @@ class TestControl:
                              QtCore.Qt.LeftButton)
         qtbot.wait(1000)
         log_str = "Acquisition 1, Reference: open, Source: home, " \
-                  + "Stage: 0.2, Filename: 0.2.tif"
+                  + "Stage: 0.2, Filename: 0.2r.tif"
 
         assert log_str in caplog.text()
 
@@ -220,7 +220,7 @@ class TestControl:
                              QtCore.Qt.LeftButton)
         qtbot.wait(3000)
         log_str = "Acquisition 1, Reference: open, Source: home, " \
-                  + "Stage: 0.2, Filename: 0.2.tif"
+                  + "Stage: 0.2, Filename: 0.2r.tif"
 
         assert log_str in caplog.text()
 

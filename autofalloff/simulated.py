@@ -51,15 +51,15 @@ class SaperaControl(object):
         acquisition.
         """
 
-        directory = "autofalloff/assets/example_data"
+        directory = "autofalloff\\assets\\example_data"
         current = self.distances[self.position]
-        filename = "%s/%s.tif" % (directory, current)
+        filename = "%s\\%s.tif" % (directory, current)
 
         self.position += 1
         if self.position == len(self.distances):
             self.position = 0
 
-        with open(filename) as tif_file:
+        with open(filename, "rb") as tif_file:
             raw_data = tif_file.read()
 
         log.debug("File %s length %s", filename, len(raw_data))
