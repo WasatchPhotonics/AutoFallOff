@@ -61,6 +61,9 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
 
 [Files]
 Source: "built-dist\*"; DestDir: "{app}"; Flags: recursesubdirs ignoreversion
+; Simulation imagery
+
+Source: "autofalloff\assets\example_data\*"; DestDir: "{app}\autofalloff\assets\example_data"; Flags: recursesubdirs ignoreversion 
 
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
