@@ -20,7 +20,6 @@ install:
   - conda update -q conda
   - conda info -a
 
-<<<<<<< HEAD
   # On 2016-04-18 14:12, installing conda then update conda has a much
   # cleaner pyinstaller procedure. If you just specify pyqtgraph as the
   # sole package on the conda create line, everything seems fine.
@@ -47,11 +46,6 @@ install:
     #- "pip install pyserial"
     #- "pip install pillow"
     
-=======
-  # Mimic of development machine miniconda setup
-  - conda create --name test-environment python=%PYTHON_VERSION% numpy pyqtgraph pyside
-  - activate test-environment
-
   # On 2016-03-04ish, a build now works with default setuptools -
   # unforutnately, this increase in compatibility manifests as a build
   # error. Something about distribute being the wrong version and/or
@@ -70,7 +64,6 @@ install:
   - "pip install pyserial"
   - "pip install pillow"
 
->>>>>>> ec837d1e9a58620012d0b131a72ad3fb1b32e57d
   - choco install -y InnoSetup
   - set PATH="C:\Program Files (x86)\Inno Setup 5";%PATH%
 
