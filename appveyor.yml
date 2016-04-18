@@ -23,7 +23,7 @@ install:
   # On 2016-04-18 14:12, installing conda then update conda has a much
   # cleaner pyinstaller procedure. If you just specify pyqtgraph as the
   # sole package on the conda create line, everything seems fine.
-  - conda create --name test-environment pyqtgraph
+  - conda create --name test-environment pyside pyqtgraph
 
     ## Mimic of development machine miniconda setup
     #- conda create --name test-environment python=%PYTHON_VERSION% numpy pyqtgraph pyside
