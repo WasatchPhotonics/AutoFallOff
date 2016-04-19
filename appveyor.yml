@@ -57,15 +57,6 @@ install:
   #- "pip install setuptools==19.3"
   #201604151537 testing the rebuild at appveyor
 
-  - "pip install pyinstaller"
-  - "pip install six"
-  - "pip install pytest"
-  - "pip install pytest-qt"
-  - "pip install pytest-capturelog"
-  - "pip install pyserial"
-  - "pip install pillow"
-  - "pip install setuptools"
-
   - choco install -y InnoSetup
   - set PATH="C:\Program Files (x86)\Inno Setup 5";%PATH%
 
@@ -84,7 +75,6 @@ after_test:
       --workpath=scripts/work-path \
       --noconfirm \
       --clean \
-      --windowed \
       --icon autofalloff/assets/images/ApplicationIcon.ico \
       --specpath scripts \
       scripts/AutoFallOff.py"
