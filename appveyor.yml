@@ -78,6 +78,7 @@ test_script:
 
 after_test:
 
+   - activate test-environment
    - "python setup.py develop"
    - "pyinstaller \
       --distpath=scripts/built-dist \
