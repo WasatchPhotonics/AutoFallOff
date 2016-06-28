@@ -69,7 +69,7 @@ build: off
 test_script:
   # Run the project tests
      - "python setup.py develop"
-       #- "py.test tests -s"
+     - "py.test tests -s"
 
 after_test:
 
