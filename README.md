@@ -23,3 +23,6 @@ Environment setup instructions
     python setup.py develop
 
     
+Fedora Core 24 setup:
+
+    sudo dnf -y libjpeg-devel libX11-devel

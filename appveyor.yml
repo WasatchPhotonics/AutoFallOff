@@ -23,42 +23,32 @@ install:
   - conda update -q conda
   - conda info -a
 
-  # On 2016-04-18 14:12, installing conda then update conda has a much
-  # cleaner pyinstaller procedure. If you just specify pyqtgraph as the
-  # sole package on the conda create line, everything seems fine.
-  - conda create --name test-environment pyside pyqtgraph
-  - activate test-environment
+  - conda create --name autofalloff_conda pyside
+  - activate autofalloff_conda
 
-  ## Mimic of development machine miniconda setup
-  #- conda create --name test-environment python=%PYTHON_VERSION% numpy pyqtgraph pyside
-  #- activate test-environment
-  #
-  ## On 2016-03-04ish, a build now works with default setuptools -
-  ## unforutnately, this increase in compatibility manifests as a build
-  ## error. Something about distribute being the wrong version and/or
-  ## choco failures
-  ##- conda remove --name test-environment setuptools
-  ##- activate test-environment
-  ## https://github.com/pyinstaller/pyinstaller/issues/1781
-  ##- "pip install setuptools==19.3"
-  #
-  - "pip install pyinstaller"
-  - "pip install six"
-  - "pip install pytest"
-  - "pip install pytest-qt"
-  - "pip install pytest-capturelog"
-  - "pip install pyserial"
-  - "pip install pillow"
-    
-  # On 2016-03-04ish, a build now works with default setuptools -
-  # unforutnately, this increase in compatibility manifests as a build
-  # error. Something about distribute being the wrong version and/or
-  # choco failures
-  #- conda remove --name test-environment setuptools
-  #- activate test-environment
-  # https://github.com/pyinstaller/pyinstaller/issues/1781
-  #- "pip install setuptools==19.3"
-  #201604151537 testing the rebuild at appveyor
+  - conda remove setuptools
+
+  - conda install numpy
+
+  - conda remove distribute
+  - conda remove setuptools
+  - conda remove six
+
+  - conda remove distribute
+
+  - conda install pywin32
+
+  - pip install pefile
+  - pip install pyinstaller
+
+  - conda install six
+  - conda install distribute
+  - conda install pillow
+  - conda install pyqtgraph
+  - conda install pyserial
+
+    #Copy C:\Miniconda2\envs\autofalloff_conda\Library\bin\mkl_avx.dll 
+    # To:  scripts\built-dist\AutoFallOff
 
   - choco install -y InnoSetup
   - set PATH="C:\Program Files (x86)\Inno Setup 5";%PATH%
@@ -69,19 +59,18 @@ build: off
 test_script:
   # Run the project tests
      - "python setup.py develop"
-     - "py.test tests -s"
+     - "py.test tests/test_control.py -s -k test_controller_sees_default_state_on_startup"
 
 after_test:
 
    - "pyinstaller \
+      --clean \
       --distpath=scripts/built-dist \
       --workpath=scripts/work-path \
       --noconfirm \
-      --clean \
       --icon autofalloff/assets/images/ApplicationIcon.ico \
       --specpath scripts \
       scripts/AutoFallOff.py"
-
       
    - "iscc scripts\\Application_InnoSetup.iss"
    - ps: "ls scripts\\built-dist\\*.exe"

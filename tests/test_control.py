@@ -95,7 +95,7 @@ class TestControl:
         return self.basic_window(qtbot, request, hardware="simulated")
 
 
-    def test_controller_sees_deafult_state_on_startup(self, basic_window,
+    def test_controller_sees_default_state_on_startup(self, basic_window,
                                                       qtbot, caplog):
 
         QtTest.QTest.qWaitForWindowShown(basic_window.form)

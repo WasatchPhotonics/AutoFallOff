@@ -6,7 +6,7 @@ The general approach is that the control portion of the application instantiates
 a MainLogger object below. This will create a separate process that looks for
 log events on a queue. Each process of the application then registers a queue
 handler, and writes its log events. The MainLogger loop will collect and write
-these log events to file and any any other defined logging location.
+these log events to file and any other defined logging location.
 
 """
 import os
