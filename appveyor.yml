@@ -25,45 +25,27 @@ install:
 
   - conda create --name autofalloff_conda pyside
   - activate autofalloff_conda
-  - conda list
 
   - conda remove setuptools
-  - conda list
 
   - conda install numpy
-  - conda list
 
-  # Not installed by default on appveyor
-  #- conda remove distribute
-  #- conda list
-  #- conda remove setuptools
-  #- conda list
-  #- conda remove six
-
-  #- conda remove distribute
-  #- conda list
+  # The appveyor and local machine configurations seem to require
+  # divergence at this point. See appveyor.yml readme for details.
 
   - conda install pywin32
-  - conda list
 
+  # No conda packages for these:
   - pip install pefile
   - pip install pyinstaller
 
   - conda install pyside
-  - conda list
   - conda install six
-  - conda list
   - conda install distribute
-  - conda list
   - conda install pillow
-  - conda list
   - conda install pyqtgraph
-  - conda list
   - conda install pyserial
-  - conda list
 
-    #Copy C:\Miniconda2\envs\autofalloff_conda\Library\bin\mkl_avx.dll 
-    # To:  scripts\built-dist\AutoFallOff
 
   - choco install -y InnoSetup
   - set PATH="C:\Program Files (x86)\Inno Setup 5";%PATH%
@@ -74,7 +56,7 @@ build: off
 test_script:
   # Run the project tests
      - "python setup.py develop"
-     - "py.test tests/test_control.py -s -k test_controller_sees_default_state_on_startup"
+     - "py.test -s"
 
 after_test:
 
