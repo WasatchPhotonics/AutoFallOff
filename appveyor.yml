@@ -25,18 +25,25 @@ install:
 
   - conda create --name autofalloff_conda pyside
   - activate autofalloff_conda
+  - conda list
 
   - conda remove setuptools
+  - conda list
 
   - conda install numpy
+  - conda list
 
   - conda remove distribute
+  - conda list
   - conda remove setuptools
+  - conda list
   - conda remove six
 
   - conda remove distribute
+  - conda list
 
   - conda install pywin32
+  - conda list
 
   - pip install pefile
   - pip install pyinstaller
