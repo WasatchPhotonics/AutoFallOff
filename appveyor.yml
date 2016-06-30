@@ -33,14 +33,15 @@ install:
   - conda install numpy
   - conda list
 
-  - conda remove distribute
-  - conda list
-  - conda remove setuptools
-  - conda list
-  - conda remove six
+  # Not installed by default on appveyor
+  #- conda remove distribute
+  #- conda list
+  #- conda remove setuptools
+  #- conda list
+  #- conda remove six
 
-  - conda remove distribute
-  - conda list
+  #- conda remove distribute
+  #- conda list
 
   - conda install pywin32
   - conda list
@@ -49,10 +50,15 @@ install:
   - pip install pyinstaller
 
   - conda install six
+  - conda list
   - conda install distribute
+  - conda list
   - conda install pillow
+  - conda list
   - conda install pyqtgraph
+  - conda list
   - conda install pyserial
+  - conda list
 
     #Copy C:\Miniconda2\envs\autofalloff_conda\Library\bin\mkl_avx.dll 
     # To:  scripts\built-dist\AutoFallOff
