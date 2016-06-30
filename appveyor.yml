@@ -49,6 +49,8 @@ install:
   - pip install pefile
   - pip install pyinstaller
 
+  - conda install pyside
+  - conda list
   - conda install six
   - conda list
   - conda install distribute
