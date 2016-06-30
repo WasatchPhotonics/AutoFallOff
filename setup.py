@@ -10,10 +10,6 @@ requires = [
     "pytest-cov",
     "pytest-qt",
     "pytest-capturelog",
-    "pyside",
-    "pyserial",
-    "pillow",
-    "pyqtgraph",
     ]
 
 setup(name="autofalloff",
