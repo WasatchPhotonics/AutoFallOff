@@ -6,9 +6,6 @@ environment:
     - PYTHON_VERSION: 2.7
       MINICONDA: C:\Miniconda
 
-init:
-  - "ECHO %PYTHON_VERSION% %MINICONDA%"
-
 platform:
   - x64
 
@@ -80,7 +77,8 @@ after_test:
 
    - ps: "7z a AutoFallOff.zip scripts\\built-dist"
 
-   - ps: "ls %MINICONDA%\\Library\\bin\\*.exe"
+   - ps: "ls %CONDA_DEFAULT_ENV%\\Library\\bin\\*.exe"
+   - ps: "ls %CONDA_DEFAULT_ENV%\\Library\\bin\\mkl_avx.dll"
 
 
 artifacts:

@@ -60,11 +60,16 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
+; "Regular" files
 Source: "built-dist\*"; DestDir: "{app}"; Flags: recursesubdirs ignoreversion
-; Simulation imagery
 
+; Required mkl_avx.dll file - note how brittle this is. Really should
+; find out why the pyinstaller does not seem to include this.
+
+; Simulation imagery
 Source: "..\autofalloff\assets\example_data\*"; DestDir: "{app}\autofalloff\autofalloff\assets\example_data"; Flags: recursesubdirs ignoreversion 
 
+Source: "..\autofalloff\assets\example_data\*"; DestDir: "{app}\autofalloff\autofalloff\assets\example_data"; Flags: recursesubdirs ignoreversion 
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]
