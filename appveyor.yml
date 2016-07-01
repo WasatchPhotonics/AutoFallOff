@@ -46,6 +46,8 @@ install:
   - conda install pyqtgraph
   - conda install pyserial
 
+  # For matching with a local build environment
+  - conda list
 
   - choco install -y InnoSetup
   - set PATH="C:\Program Files (x86)\Inno Setup 5";%PATH%
@@ -59,6 +61,9 @@ test_script:
      - "py.test -s"
 
 after_test:
+
+   # For matching with a local build environment
+   - conda list
 
    - "pyinstaller \
       --clean \
@@ -74,6 +79,9 @@ after_test:
    - ps: "ls scripts\\windows_installer\\*.exe"
 
    - ps: "7z a AutoFallOff.zip scripts\\built-dist"
+
+   - ps: "ls %MINICONDA%\\Library\\bin\\*.exe"
+
 
 artifacts:
    - path: AutoFallOff.zip
