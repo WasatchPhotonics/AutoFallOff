@@ -66,7 +66,11 @@ Source: "built-dist\*"; DestDir: "{app}"; Flags: recursesubdirs ignoreversion
 ; Required mkl_avx.dll file - note how brittle this is. Really should
 ; find out why the pyinstaller does not seem to include this.
 ;CondaPath='C:\Miniconda2\envs\autofalloff_conda'
-Source: "C:\Miniconda2\envs\autofalloff_conda\Library\bin\mkl_avx.dll"; DestDir: "{app}\autofalloff\"; Flags: recursesubdirs ignoreversion
+; For windows 7 non-appveyor:
+; Source: "C:\Miniconda2\envs\autofalloff_conda\Library\bin\mkl_avx.dll"; DestDir: "{app}\autofalloff\"; Flags: recursesubdirs ignoreversion
+;
+; For appveyor:
+Source: "C:\Miniconda\envs\autofalloff_conda\Library\bin\mkl_avx.dll"; DestDir: "{app}\autofalloff\"; Flags: recursesubdirs ignoreversion
 
 
 ; Simulation imagery
