@@ -77,10 +77,6 @@ after_test:
 
    - ps: "7z a AutoFallOff.zip scripts\\built-dist"
 
-   - ps: "ls %CONDA_DEFAULT_ENV%\\Library\\bin\\*.exe"
-   - ps: "ls %CONDA_DEFAULT_ENV%\\Library\\bin\\mkl_avx.dll"
-
-
 artifacts:
    - path: AutoFallOff.zip
    - path: scripts\windows_installer\*.exe
