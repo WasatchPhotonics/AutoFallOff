@@ -65,6 +65,8 @@ Source: "built-dist\*"; DestDir: "{app}"; Flags: recursesubdirs ignoreversion
 
 ; Required mkl_avx.dll file - note how brittle this is. Really should
 ; find out why the pyinstaller does not seem to include this.
+Source: "{%CONDA_DEFAULT_ENV}\Library\bin\mkl_avx.dll"; DestDir: "{app}\autofalloff\"; Flags: recursesubdirs ignoreversion
+
 
 ; Simulation imagery
 Source: "..\autofalloff\assets\example_data\*"; DestDir: "{app}\autofalloff\autofalloff\assets\example_data"; Flags: recursesubdirs ignoreversion 
