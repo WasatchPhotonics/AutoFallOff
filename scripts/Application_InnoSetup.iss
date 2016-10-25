@@ -66,15 +66,15 @@ Source: "built-dist\*"; DestDir: "{app}"; Flags: recursesubdirs ignoreversion
 ; Required mkl_avx.dll file - note how brittle this is. Really should
 ; find out why the pyinstaller does not seem to include this.
 ; For appveyor:
-; Source: "C:\Miniconda\envs\autofalloff_conda\Library\bin\mkl_avx.dll"; DestDir: "{app}\autofalloff\"; Flags: recursesubdirs ignoreversion
+ Source: "C:\Miniconda\envs\autofalloff_conda\Library\bin\mkl_avx.dll"; DestDir: "{app}\autofalloff\"; Flags: recursesubdirs ignoreversion
+
+; Yes, it must be from appveyor and not from the local respository, as
+; the architectures appear different. The msvcr100.dll file apparently
+; does not have this issue.
+
+
 ; Source: "vcredist_x86.exe"; DestDir: {tmp}; Flags: deleteafterinstall
 
-; Starting below at 20161025, the deliberate transformation here is to include mkl_avx and msvcr100 dll's into the source repository.
-; If this comes back to bite, try the procedure above, which includes the avx from the installed location on appveyor. It then runs
-; the msvcr directly post install with a silent option.
-
-; To copy the file manually included in the source tree:
-Source: "support_files\mkl_avx.dll"; DestDir: "{app}\autofalloff\"; Flags: recursesubdirs ignoreversion
 
 ; There are many ways to include a Visual Studio runtime distributable. This way is to copy the dll into the application folder.
 Source: "support_files\msvcr100.dll"; DestDir: "{app}\autofalloff\"; Flags: recursesubdirs ignoreversion
@@ -91,4 +91,5 @@ Name: "{commondesktop}\{#MyAppName}"; Filename: "{app}\{#MyAppName}\{#MyAppExeNa
 [Run]
 ; See notes above for why this is commented out:
 ; Filename: {tmp}\vcredist_x86.exe; Parameters: "/q /passive /Q:a /c:""msiexec /q /i vcredist.msi"" "; StatusMsg: Installing VC++ 2010 Redistributables...
+
 Filename: "{app}\{#MyAppName}\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#StringChange(MyAppName, '&', '&&')}}"; Flags: nowait postinstall skipifsilent

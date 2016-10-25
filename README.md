@@ -71,6 +71,12 @@ Continuous integration (appveyor) settings.
     Then run python setup.py develop to pull in py.test, etc.
 
 
+    Requirements for the system to be installed:
+    Microsoft Visual C++ 2010 x86 Redistributable - 10.0.40219
+    Available at: 
+    https://www.microsoft.com/en-us/download/confirmation.aspx?id=8328
+
+
 Fedora Core 24 specific prerequisites:
 
     sudo dnf -y libjpeg-devel libX11-devel
