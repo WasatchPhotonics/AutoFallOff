@@ -23,12 +23,15 @@ install:
   - conda create --name autofalloff_conda pyside
   - activate autofalloff_conda
 
+
+  # The exact steps here are born from hours of environment comparison
+  # and testing. As of 2016-10-24 16:21, this appears to be the set of
+  # required steps to build the application that will run on bare bones
+  # windows 10 install.
+
   - conda remove setuptools
 
   - conda install numpy
-
-  # The appveyor and local machine configurations seem to require
-  # divergence at this point. See appveyor.yml readme for details.
 
   - conda install pywin32
 
