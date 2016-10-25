@@ -19,45 +19,58 @@ Environment setup instructions
     conda update conda
     conda --version (4.0.5 for these instructions)
 
-Follow the instructions line by line in appveyor.yml, this will give you
-on linux the output of condat --list:
+Continuous integration (appveyor) settings. 
 
-distribute                0.6.45                   py27_1  
-freetype                  2.5.5                         1  
-future                    0.15.2                    <pip>
-jbig                      2.1                           0  
-jpeg                      8d                            2  
-libpng                    1.6.22                        0  
-libtiff                   4.0.6                         2  
-mkl                       11.3.3                        0  
-numpy                     1.11.2                   py27_0  
-openssl                   1.0.2j                        0  
-pefile                    2016.3.28                 <pip>
-pillow                    3.4.2                    py27_0  
-pip                       8.1.2                    py27_0  
-PyInstaller               3.2                       <pip>
-pyqt                      4.10.4                   py27_0  
-pyqtgraph                 0.9.10                   py27_1  
-pyserial                  2.7                      py27_0  
-pyside                    1.2.1                    py27_1  
-python                    2.7.12                        1  
-qt                        4.8.5                         0  
-readline                  6.2                           2  
-setuptools                27.2.0                   py27_0  
-shiboken                  1.2.1                    py27_0  
-sip                       4.15.5                   py27_0  
-six                       1.10.0                   py27_0  
-sqlite                    3.13.0                        0  
-tk                        8.5.18                        0  
-wheel                     0.29.0                   py27_0  
-xz                        5.2.2                         0  
-zlib                      1.2.8                         3  
+    As of 2016-10-25 11:16, appveyor has environmental differences with
+    an 'example windows 10' installation. These differences can be
+    resolved with the procedure listed below. If you do not follow the
+    instructions precisely, you may receive errors about setuptools,
+    six, or other python modules. If you do not receive those errors,
+    you may receive errors on installation about pyi_rth_pkgres, missing
+    *avx* dll files or other messages at runtime.
+
+    These specific instructions are required for pyqtgraph with numpy in
+    a distributed application created with pyinstaller on appveyor. 
 
 
+    Follow the instructions line by line in appveyor.yml, this will give you
+    on linux the output of conda --list:
+    
+    distribute                0.6.45                   py27_1  
+    freetype                  2.5.5                         1  
+    future                    0.15.2                    <pip>
+    jbig                      2.1                           0  
+    jpeg                      8d                            2  
+    libpng                    1.6.22                        0  
+    libtiff                   4.0.6                         2  
+    mkl                       11.3.3                        0  
+    numpy                     1.11.2                   py27_0  
+    openssl                   1.0.2j                        0  
+    pefile                    2016.3.28                 <pip>
+    pillow                    3.4.2                    py27_0  
+    pip                       8.1.2                    py27_0  
+    PyInstaller               3.2                       <pip>
+    pyqt                      4.10.4                   py27_0  
+    pyqtgraph                 0.9.10                   py27_1  
+    pyserial                  2.7                      py27_0  
+    pyside                    1.2.1                    py27_1  
+    python                    2.7.12                        1  
+    qt                        4.8.5                         0  
+    readline                  6.2                           2  
+    setuptools                27.2.0                   py27_0  
+    shiboken                  1.2.1                    py27_0  
+    sip                       4.15.5                   py27_0  
+    six                       1.10.0                   py27_0  
+    sqlite                    3.13.0                        0  
+    tk                        8.5.18                        0  
+    wheel                     0.29.0                   py27_0  
+    xz                        5.2.2                         0  
+    zlib                      1.2.8                         3  
 
-Then run python setup.py develop to pull in py.test, etc.
+
+    Then run python setup.py develop to pull in py.test, etc.
 
 
-Fedora Core 24 setup:
+Fedora Core 24 specific prerequisites:
 
     sudo dnf -y libjpeg-devel libX11-devel
